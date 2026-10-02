@@ -7,7 +7,7 @@
   
   <meta name="description" content="Página personal de Kalista (Tears Mysthrala). Empresaria y desarrolladora de sistemas. Ciberseguridad industrial (OT/ICS), criterio de negocio, DFIR y software local-first.">
   <meta name="author" content="Kalista (Tears Mysthrala)">
-  <meta name="theme-color" content="#fbfaf7">
+  <meta name="theme-color" content="#f7f6f2">
   <link rel="canonical" href="https://mysthrala.com/">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
@@ -25,256 +25,296 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <div class="page-wrap">
-    <!-- Header -->
-    <header class="site-header">
-      <div class="brand">
-        <a href="#inicio" class="brand-name">Kalista</a>
-        <span class="brand-dot" aria-hidden="true">·</span>
-        <span class="brand-desc">Tears Mysthrala</span>
-      </div>
-      <nav aria-label="Navegación principal">
-        <a href="#trayectoria">Perfil</a>
-        <a href="#consultoria">Empresaria</a>
-        <a href="#desarrollo">Desarrollo</a>
-        <a href="#principios">Principios</a>
-        <a href="#contacto" class="nav-contact-link">Contacto</a>
-      </nav>
-    </header>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="#inicio" class="brand-link">
+        <span class="brand-name">Kalista</span>
+        <span class="brand-sub">Tears Mysthrala</span>
+      </a>
+    </div>
+    <nav aria-label="Navegación principal">
+      <a href="#perfil">Perfil</a>
+      <a href="#direccion">Dirección OT</a>
+      <a href="#desarrollo">Desarrollo</a>
+      <a href="#principios">Principios</a>
+      <a href="#contacto" class="nav-contact">Contacto</a>
+    </nav>
+  </header>
 
-    <main id="contenido">
-      <!-- Hero -->
-      <section class="hero" id="inicio">
-        <p class="meta-lead">
-          <span class="hanko-mark" aria-hidden="true"></span>
-          Empresaria &amp; Desarrolladora de Sistemas · she/they
-        </p>
-
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="context">Identidad personal · Dirección &amp; Sistemas</p>
         <h1>
-          Criterio de negocio en la dirección. <em>Rigor técnico en el código.</em>
+          Criterio de negocio en la dirección.
+          <em>Rigor técnico en el código.</em>
         </h1>
-
-        <p class="hero-body">
+        <p class="hero-lead">
           Soy Kalista. Trabajo en el punto de encuentro donde la viabilidad y la continuidad de una empresa industrial se encuentran con la ingeniería de software a bajo nivel. Ayudo a proteger operaciones reales y construyo herramientas locales, auditables y tolerantes a fallos.
         </p>
-
         <div class="hero-actions">
-          <a href="#contacto" class="link-btn">Iniciar una conversación</a>
-          <a href="#trayectoria" class="text-action">Leer sobre mi enfoque →</a>
+          <a class="button button-primary" href="#contacto">Iniciar una conversación</a>
+          <a class="text-link" href="#perfil">Conocer mi enfoque →</a>
         </div>
-      </section>
+      </div>
 
-      <!-- Perfil Dual: El Punto de Encuentro -->
-      <section class="section" id="trayectoria">
-        <span class="section-label">01 / El Punto de Encuentro</span>
-        <h2 class="section-title">La perspectiva integral</h2>
-        <p class="section-lead">
-          En el entorno tecnológico e industrial abunda la desconexión: comerciales que venden soluciones cerradas sin entender la planta o perfiles técnicos aislados de la realidad económica. Mi valor radica en sostener ambas conversaciones.
+      <figure class="profile-card" aria-label="Síntesis de perfil">
+        <div class="card-head">
+          <span>Identidad</span>
+          <span>Empresaria &amp; Desarrolladora</span>
+        </div>
+        <p class="card-quote">
+          La seguridad y el software deben sostener la realidad operativa de la empresa, sin burocracia estéril ni cajas negras.
         </p>
-
-        <div class="pillar-row">
-          <!-- Como Empresaria -->
-          <article class="pillar">
-            <h3>
-              Como Empresaria
-              <span class="pillar-tag business">Dirección &amp; OT</span>
-            </h3>
-            <p>
-              Entiendo la responsabilidad de dirigir iniciativas, sostener balances y responder ante clientes y reguladores. La seguridad debe ser un escudo de continuidad, no una traba que ahogue la producción.
-            </p>
-            <ul class="bullet-list">
-              <li>
-                <strong>La fábrica manda:</strong> Ninguna medida técnica es válida si compromete los plazos de entrega o perturba los autómatas en planta.
-              </li>
-              <li>
-                <strong>Traducción de riesgo a balance:</strong> Interlocución con gerencia en términos de costes por parada, responsabilidad legal e impacto en la cadena de suministro.
-              </li>
-              <li>
-                <strong>Gobernanza con evidencia (NIS2):</strong> Adecuación basada en orden técnico real y documentación auditable, evitando la compra de certificaciones estériles.
-              </li>
-              <li>
-                <strong>Criterio independiente:</strong> Asesoramiento neutral sin comisiones ni ataduras a fabricantes de software.
-              </li>
-            </ul>
-          </article>
-
-          <!-- Como Desarrolladora -->
-          <article class="pillar">
-            <h3>
-              Como Desarrolladora
-              <span class="pillar-tag dev">Bajo Nivel &amp; DFIR</span>
-            </h3>
-            <p>
-              Mi criterio en la mesa de decisión nace de bajar al barro: programar, examinar el tráfico de red, analizar la memoria RAM y construir arquitecturas distribuidas.
-            </p>
-            <ul class="bullet-list">
-              <li>
-                <strong>Forense de memoria volátil (DFIR):</strong> Las intrusiones profesionales evitan el disco. Domino el examen de memoria RAM para hallar la causa raíz sin conjeturas.
-              </li>
-              <li>
-                <strong>Sistemas tolerantes a fallos (OTP):</strong> Desarrollo con el modelo de actores en Elixir/OTP. Software concebido para aislar fallos, auto-recuperarse y no caer jamás bajo carga.
-              </li>
-              <li>
-                <strong>Filosofía Local-First:</strong> Herramientas auditables y soberanas que operan en local, sin telemetría forzada ni dependencias ciegas de nubes ajenas.
-              </li>
-              <li>
-                <strong>Hardening de sistemas:</strong> Creación de entornos reproducibles en Linux y PowerShell modular con reducción drástica de superficie de ataque.
-              </li>
-            </ul>
-          </article>
+        <div class="card-specs">
+          <div class="spec-row">
+            <span class="spec-label">Dirección &amp; OT</span>
+            <span class="spec-value">Gobierno NIS2, cartografía Purdue y continuidad</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Sistemas</span>
+            <span class="spec-value">Forense DFIR en memoria, Elixir/OTP y local-first</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Posicionamiento</span>
+            <span class="spec-value">Asesoramiento independiente y código propio</span>
+          </div>
         </div>
-      </section>
-
-      <!-- Consultoría OT / Empresa -->
-      <section class="section" id="consultoria">
-        <span class="section-label">02 / Práctica Empresarial</span>
-        <h2 class="section-title">Defensa y continuidad para el entorno industrial</h2>
-        <p class="section-lead">
-          Intervenciones selectas diseñadas para identificar riesgos tangibles, aislar celdas críticas y ordenar la evidencia técnica.
+        <p class="card-foot">
+          Fundadora de MKDL · Práctica privada de consultoría e ingeniería
         </p>
+      </figure>
+    </section>
 
-        <div class="curated-list">
-          <div class="curated-item">
-            <span class="item-num">01</span>
-            <div class="item-content">
-              <h4>Cartografía &amp; Hardening de Redes OT</h4>
-              <p>Mapeo pasivo de activos bajo el modelo Purdue, detección de puentes no autorizados entre IT y OT, y segmentación estricta de controladores (PLCs / RTUs) sin introducir latencia.</p>
-              <span class="item-meta">Enfoque: Aislamiento de línea productiva</span>
-            </div>
-          </div>
+    <!-- Declaración / Statement -->
+    <section class="statement" aria-label="Declaración de postura">
+      <p>Ni comerciales que desconocen la planta ni técnicos ajenos al balance.</p>
+      <p>Criterio de dirección forjado en el código y en la realidad de la fábrica.</p>
+    </section>
 
-          <div class="curated-item">
-            <span class="item-num">02</span>
-            <div class="item-content">
-              <h4>Respuesta a Incidentes &amp; Contención</h4>
-              <p>Intervención técnica ante anomalías, sospechas de sabotaje o intentos de extorsión. Triage rápido en caliente preservando la cadena de custodia y la continuidad de las máquinas.</p>
-              <span class="item-meta">Enfoque: Erradicación sin destrucción de evidencia</span>
-            </div>
-          </div>
+    <!-- Perfil Dual: El Punto de Encuentro -->
+    <section class="section" id="perfil">
+      <div class="section-heading">
+        <p class="section-index">El punto de encuentro</p>
+        <h2>La convergencia entre dirección y desarrollo</h2>
+      </div>
 
-          <div class="curated-item">
-            <span class="item-num">03</span>
-            <div class="item-content">
-              <h4>Gobierno Técnico &amp; NIS2 Proporcionado</h4>
-              <p>Adaptación pragmática a las exigencias normativas europeas. Traduzco los requisitos legales a medidas de ingeniería reales, defendibles ante inspección y sin parálisis administrativa.</p>
-              <span class="item-meta">Enfoque: Cumplimiento técnico auditable</span>
-            </div>
-          </div>
-
-          <div class="curated-item">
-            <span class="item-num">04</span>
-            <div class="item-content">
-              <h4>Asesoría Independiente a Dirección</h4>
-              <p>Segunda opinión experta previa a inversiones en digitalización, interconexión de maquinaria o contratación de proveedores externos de IT/OT.</p>
-              <span class="item-meta">Enfoque: Protección del patrimonio y autonomía</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Desarrollo de Sistemas / Builder -->
-      <section class="section" id="desarrollo">
-        <span class="section-label">03 / Ingeniería &amp; Software</span>
-        <h2 class="section-title">Código auditable, investigación forense y resiliencia</h2>
-        <p class="section-lead">
-          Construyo herramientas defensivas y software de alta concurrencia. No creo en las soluciones que dependen de nubes opacas cuando el control debe ser propio.
-        </p>
-
-        <div class="curated-list">
-          <div class="curated-item">
-            <span class="item-num">01</span>
-            <div class="item-content">
-              <h4>Análisis Forense de Memoria (DFIR)</h4>
-              <p>Investigación aplicada sobre Volatility 3 y desarrollo de herramientas docentes (como la iniciativa <em>Oroitz</em>) para mantener al analista al mando del examen de memoria RAM.</p>
-              <span class="item-meta">Tecnología: Python · Volatility 3 · Forense</span>
-            </div>
-          </div>
-
-          <div class="curated-item">
-            <span class="item-num">02</span>
-            <div class="item-content">
-              <h4>Sistemas de Alta Disponibilidad &amp; BEAM</h4>
-              <p>Diseño de componentes en tiempo real basados en procesos ligeros y árboles de supervisión. La resiliencia no se parchea al final; se inscribe en la arquitectura desde el inicio.</p>
-              <span class="item-meta">Tecnología: Elixir · OTP · Concurrencia</span>
-            </div>
-          </div>
-
-          <div class="curated-item">
-            <span class="item-num">03</span>
-            <div class="item-content">
-              <h4>Estaciones Seguras &amp; Hardening Reproducible</h4>
-              <p>Configuración modular de entornos de trabajo en Linux y PowerShell 7 para Windows. Puestos de investigación endurecidos con privilegios mínimos y cero telemetría.</p>
-              <span class="item-meta">Tecnología: Shell · PowerShell 7 · Hardening</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Principios -->
-      <section class="section" id="principios">
-        <span class="section-label">04 / Fundamentos</span>
-        <h2 class="section-title">Principios de actuación</h2>
-        <p class="section-lead">
-          Pautas firmes que rigen cada colaboración que acepto y cada línea de código que escribo.
-        </p>
-
-        <div class="principles-list">
-          <div class="principle-entry">
-            <h4><span>01</span> Rigor Demostrable</h4>
-            <p><em>"No afirmo lo que no puedo demostrar"</em>. Rechazo el alarmismo comercial. Cada afirmación técnica se respalda con evidencias reproducibles en laboratorio.</p>
-          </div>
-
-          <div class="principle-entry">
-            <h4><span>02</span> Pragmatismo de Planta</h4>
-            <p>La seguridad está al servicio del proceso productivo y del negocio. Si una medida técnica bloquea el trabajo diario de la fábrica, es una mala medida técnica.</p>
-          </div>
-
-          <div class="principle-entry">
-            <h4><span>03</span> Control Humano Soberano</h4>
-            <p>La automatización y las herramientas asisten y ordenan la evidencia; la decisión, el criterio y la aprobación final pertenecen siempre a las personas.</p>
-          </div>
-
-          <div class="principle-entry">
-            <h4><span>04</span> Discreción &amp; Local-First</h4>
-            <p>Confidencialidad absoluta en cada intervención industrial. Tus datos, topologías y procedimientos nunca se envían a nubes opacas.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contacto -->
-      <section class="contact-section" id="contacto">
-        <div class="contact-box">
-          <h3>Iniciemos una conversación</h3>
-          <p>
-            Si necesitas asesoría estratégica para tu empresa, una auditoría técnica en planta o quieres explorar una colaboración en proyectos de ingeniería de sistemas, conversemos directamente.
+      <div class="dual-columns">
+        <!-- Como Empresaria -->
+        <article class="column-card">
+          <h3>Como Empresaria</h3>
+          <p class="column-intro">
+            Entiendo la responsabilidad ejecutiva de sostener una estructura, defender balances y responder ante clientes y reguladores. La ciberseguridad industrial debe ser una palanca de continuidad, jamás un obstáculo que detenga la producción.
           </p>
+          <ul class="clean-list">
+            <li>
+              <strong>La fábrica manda:</strong> Ninguna decisión técnica es viable si compromete las entregas o altera los controladores en planta.
+            </li>
+            <li>
+              <strong>Traducción de riesgo a negocio:</strong> Comunicación directa con gerencia evaluando el coste de parada, la responsabilidad legal y el impacto real en la cadena de suministro.
+            </li>
+            <li>
+              <strong>Gobernanza basada en evidencia:</strong> Adecuación a la directiva NIS2 mediante orden técnico verificable y trazabilidad, desestimando certificaciones vacías.
+            </li>
+            <li>
+              <strong>Independencia comercial:</strong> Asesoramiento estrictamente neutral, libre de comisiones de fabricantes y dependencias de producto.
+            </li>
+          </ul>
+        </article>
 
-          <div class="contact-methods">
-            <a href="mailto:contact@mysthrala.com" class="mail-link">contact@mysthrala.com</a>
-            <a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer" class="social-link">
-              GitHub (tears-mysthrala) ↗
-            </a>
-            <span style="font-size: 0.88rem; color: var(--ink-muted);">
-              Atención directa en castellano, euskara o inglés.
-            </span>
+        <!-- Como Desarrolladora -->
+        <article class="column-card">
+          <h3>Como Desarrolladora</h3>
+          <p class="column-intro">
+            Mi solvencia en la mesa de decisión nace de mi trabajo con el código: analizar memoria volátil, programar sistemas tolerantes a fallos y diseñar herramientas defensivas locales.
+          </p>
+          <ul class="clean-list">
+            <li>
+              <strong>Forense de memoria volátil (DFIR):</strong> Las amenazas modernas evitan el disco. Domino la inspección de RAM para reconstruir incidentes y localizar la causa raíz sin suposiciones.
+            </li>
+            <li>
+              <strong>Concurrencia tolerante a fallos:</strong> Desarrollo bajo el modelo de actores en Elixir/OTP. Software concebido para aislar anomalías, auto-recuperarse y permanecer estable bajo presión.
+            </li>
+            <li>
+              <strong>Soberanía Local-First:</strong> Creación de herramientas que operan localmente, con inspección abierta, sin telemetría intrusiva ni subordinación a infraestructuras externas.
+            </li>
+            <li>
+              <strong>Hardening de sistemas:</strong> Endurecimiento modular y automatizado de entornos operativos en Linux y PowerShell, cerrando superficies de ataque desde el origen.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Dirección & Consultoría OT -->
+    <section class="section practice-section" id="direccion">
+      <div class="section-heading">
+        <p class="section-index">Dirección &amp; Entorno Industrial</p>
+        <h2>Defensa y continuidad operativa en planta</h2>
+      </div>
+
+      <div class="practice-list">
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Cartografía y segmentación de redes OT</h3>
+            <p>
+              Mapeo pasivo de activos según el modelo Purdue, detección de enlaces no autorizados entre IT y OT, y aislamiento de controladores críticos sin introducir latencia en las líneas productivas.
+            </p>
           </div>
-        </div>
-      </section>
-    </main>
+          <p class="practice-outcome">Aislamiento de la línea de producción</p>
+        </article>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div>
-        <span>Kalista — Tears Mysthrala</span>
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Respuesta a incidentes y contención técnica</h3>
+            <p>
+              Intervención en planta ante anomalías, sospechas de intrusión o situaciones de extorsión. Triage rápido en memoria preservando rigurosamente la cadena de custodia y la marcha de los procesos.
+            </p>
+          </div>
+          <p class="practice-outcome">Erradicación sin destrucción de evidencia</p>
+        </article>
+
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Adecuación técnica a la directiva NIS2</h3>
+            <p>
+              Traducción pragmática de las obligaciones regulatorias a controles técnicos aplicables en el taller o la planta, listos para auditoría y sin introducir parálisis documental.
+            </p>
+          </div>
+          <p class="practice-outcome">Cumplimiento técnico auditable</p>
+        </article>
+
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Asesoría estratégica a órganos de gobierno</h3>
+            <p>
+              Criterio experto independiente antes de acometer proyectos de digitalización industrial, adquisición de maquinaria conectada o contratación de servicios externos.
+            </p>
+          </div>
+          <p class="practice-outcome">Protección del patrimonio y autonomía</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Desarrollo & Sistemas -->
+    <section class="section practice-section" id="desarrollo">
+      <div class="section-heading">
+        <p class="section-index">Desarrollo &amp; Sistemas</p>
+        <h2>Código auditable, investigación forense y resiliencia</h2>
+      </div>
+
+      <div class="practice-list">
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Análisis forense de memoria (DFIR)</h3>
+            <p>
+              Investigación aplicada sobre Volatility 3 y desarrollo de herramientas docentes (como la iniciativa <em>Oroitz</em>) enfocadas en mantener al analista al mando del análisis forense en memoria RAM.
+            </p>
+          </div>
+          <p class="practice-outcome">Investigación en memoria &amp; Oroitz</p>
+        </article>
+
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Sistemas de alta concurrencia y tolerancia a fallos</h3>
+            <p>
+              Arquitecturas concurrentes construidas sobre la máquina virtual BEAM con Elixir y OTP. Procesos ligeros, supervisores aislados y resiliencia estructural por diseño.
+            </p>
+          </div>
+          <p class="practice-outcome">Elixir / OTP &amp; Concurrencia</p>
+        </article>
+
+        <article class="practice-item">
+          <div class="practice-main">
+            <h3>Estaciones de trabajo seguras y hardening reproducible</h3>
+            <p>
+              Automatización mediante scripts declarativos para entornos Linux y PowerShell en Windows. Configuración de puestos de análisis endurecidos, auditables y sin telemetría externa.
+            </p>
+          </div>
+          <p class="practice-outcome">Hardening modular &amp; Local-First</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Principios -->
+    <section class="section principles-section" id="principios">
+      <div class="section-heading">
+        <p class="section-index">Fundamentos</p>
+        <h2>Principios de actuación</h2>
+      </div>
+
+      <div class="principles-grid">
+        <article class="principle-card">
+          <h3>Rigor demostrable</h3>
+          <p>
+            No afirmo lo que no puedo demostrar. Descarto el alarmismo comercial y sustento cada observación y decisión técnica en evidencias objetivas y reproducibles.
+          </p>
+        </article>
+
+        <article class="principle-card">
+          <h3>Pragmatismo de planta</h3>
+          <p>
+            La seguridad industrial está al servicio de la viabilidad económica y operativa. Si una medida técnica paraliza la fábrica o asfixia el trabajo diario, es una mala medida.
+          </p>
+        </article>
+
+        <article class="principle-card">
+          <h3>Control humano soberano</h3>
+          <p>
+            La automatización y el software asisten y procesan la información; el discernimiento, el criterio y la responsabilidad última pertenecen siempre a las personas.
+          </p>
+        </article>
+
+        <article class="principle-card">
+          <h3>Discreción y soberanía local</h3>
+          <p>
+            Confidencialidad absoluta en cada intervención industrial. Los datos, la topología de red y los procesos operativos no se delegan en servicios de nube opacos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact-section" id="contacto">
+      <div class="contact-wrap">
+        <div class="contact-copy">
+          <p class="section-index" style="color: rgba(255, 255, 255, 0.75);">Contacto directo</p>
+          <h2>Iniciemos una conversación</h2>
+          <p class="contact-lead">
+            Para plantear una auditoría técnica en planta, asesoría estratégica en ciberseguridad industrial (NIS2) o proyectos de ingeniería de sistemas a bajo nivel, conversemos de forma directa y confidencial.
+          </p>
+          <div class="contact-details">
+            <a href="mailto:contact@mysthrala.com" class="button button-contact">contact@mysthrala.com</a>
+            <a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer" class="contact-link">
+              GitHub: tears-mysthrala ↗
+            </a>
+          </div>
+          <p class="contact-languages">
+            Atención disponible en castellano, euskara o inglés.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <span class="footer-title">Kalista</span>
+        <span class="footer-sub">Tears Mysthrala · Empresaria &amp; Desarrolladora</span>
       </div>
       <ul class="footer-nav">
-        <li><a href="#trayectoria">Perfil</a></li>
-        <li><a href="#consultoria">Empresaria</a></li>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#direccion">Dirección OT</a></li>
         <li><a href="#desarrollo">Desarrollo</a></li>
         <li><a href="#principios">Principios</a></li>
+        <li><a href="mailto:contact@mysthrala.com">Contacto</a></li>
         <li><a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       </ul>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
