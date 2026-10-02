@@ -1,64 +1,54 @@
 /* ==========================================================================
-   Kalista — Tears Mysthrala | Personal Landing Page
-   Aesthetic: Refined Japanese Organic Minimalism (Non-Brutalist)
-   Atmosphere:
-   - Benten: Silk paper, warm porcelain, fluid curves, wisteria accents
-   - Kurogane: Soft forged iron ink, refined charcoal typography
-   - Akkorokamui: Lacquered vermilion accents and warm vital highlights
-   - Raijin: Soft thunder amber and sunlit brass details
+   Kalista — Tears Mysthrala
+   Personal Portfolio & Identity (Empresaria & Desarrolladora)
+   Art Direction:
+   - High-craft Japanese Editorial Minimalism (Non-brutalist, serene, book-like)
+   - Benten (Silk Paper #fbfaf7 / #f5f4ef, Wisteria #52425f)
+   - Kurogane (Forged Iron Ink #1c1d22, Hairline Rules #e2dfd5)
+   - Akkorokamui (Lacquered Vermilion #b82d27 for focal accents)
+   - Raijin (Thunder Amber #be7d22 for subtle numerals and metadata)
    ========================================================================== */
 
 :root {
   color-scheme: light;
 
-  /* Surfaces & Canvas (Silk & Porcelain) */
-  --silk: #f8f7f3;
-  --silk-subtle: #f2f0ea;
-  --card-bg: #ffffff;
-  --card-hover: #fcfcfb;
+  /* Surfaces: Silk & Fine Laid Paper */
+  --bg-canvas: #fbfaf7;
+  --bg-card: #ffffff;
+  --bg-subtle: #f3f1ea;
 
-  /* Kurogane (Charcoal & Ink) */
-  --ink: #1e2026;
-  --ink-secondary: #4a4d5a;
-  --ink-muted: #787b89;
-  --border-delicate: rgba(30, 32, 40, 0.08);
-  --border-hover: rgba(30, 32, 40, 0.16);
+  /* Kurogane (Iron & Ink) */
+  --ink: #1a1b20;
+  --ink-secondary: #484b56;
+  --ink-muted: #797c88;
+  --border-line: #e3e0d6;
+  --border-delicate: rgba(26, 27, 32, 0.07);
 
-  /* Akkorokamui (Lacquered Vermilion) */
-  --vermilion: #c53830;
-  --vermilion-hover: #d7433b;
-  --vermilion-soft: #fcf1f0;
-  --vermilion-border: rgba(197, 56, 48, 0.22);
+  /* Akkorokamui (Sacred Vermilion / Cinnabar) */
+  --vermilion: #b82d27;
+  --vermilion-soft: #f7ebea;
+  --vermilion-hover: #98221d;
 
   /* Raijin (Thunder Amber & Brass) */
   --amber: #be7d22;
-  --amber-soft: #fcf6ec;
-  --amber-border: rgba(190, 125, 34, 0.25);
+  --amber-soft: #faf3e8;
 
   /* Benten (Wisteria & Celestial Plum) */
-  --wisteria: #6a567d;
-  --wisteria-soft: #f4eff8;
-  --wisteria-border: rgba(106, 86, 125, 0.2);
+  --wisteria: #52425f;
+  --wisteria-soft: #f2eef6;
 
   /* Typography & Layout */
+  --font-serif: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "DNP Shuei Mincho Pr6", serif;
   --font-sans: "Aptos", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --max-width: 1140px;
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
-  --radius-full: 9999px;
+  --max-content: 52rem;
+  --gutter: clamp(1.5rem, 5vw, 3.5rem);
 
-  /* Soft Ambient Shadows (Organic, non-brutalist) */
-  --shadow-subtle: 0 4px 20px -2px rgba(30, 32, 40, 0.04), 0 2px 6px -1px rgba(30, 32, 40, 0.02);
-  --shadow-hover: 0 12px 32px -4px rgba(30, 32, 40, 0.08), 0 4px 12px -2px rgba(30, 32, 40, 0.03);
-
-  --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.2s ease;
 }
 
-/* Reset & Base */
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -70,10 +60,11 @@ html {
 }
 
 body {
-  background-color: var(--silk);
+  background-color: var(--bg-canvas);
   color: var(--ink);
   font-family: var(--font-sans);
-  line-height: 1.68;
+  font-size: 1.05rem;
+  line-height: 1.72;
   text-rendering: optimizeLegibility;
   letter-spacing: -0.01em;
   min-height: 100vh;
@@ -82,23 +73,30 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  transition: all var(--transition);
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--vermilion);
 }
 
 h1, h2, h3, h4 {
   color: var(--ink);
-  font-weight: 560;
-  line-height: 1.15;
+  font-weight: 540;
+  line-height: 1.18;
   letter-spacing: -0.03em;
 }
 
 p {
   color: var(--ink-secondary);
-  font-size: 1.04rem;
-  line-height: 1.72;
+  margin-bottom: 1.25rem;
 }
 
-/* Skip link */
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Accessibility */
 .skip-link {
   position: fixed;
   left: 1.5rem;
@@ -107,705 +105,456 @@ p {
   padding: 0.6rem 1.2rem;
   background: var(--ink);
   color: #fff;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
+  border-radius: 4px;
+  font-size: 0.9rem;
   transition: top 0.2s ease;
 }
 .skip-link:focus {
   top: 1.5rem;
 }
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: var(--max-width);
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--vermilion);
+  outline-offset: 3px;
+}
+
+/* Page Frame */
+.page-wrap {
+  width: min(calc(100% - 2 * var(--gutter)), var(--max-content));
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 0 6rem;
 }
 
 /* ==========================================================================
-   Header & Navigation
+   Header
    ========================================================================== */
 .site-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background: rgba(248, 247, 243, 0.88);
-  border-bottom: 1px solid var(--border-delicate);
-  z-index: 100;
-  transition: border-color var(--transition);
-}
-
-.site-header .nav-container {
+  padding: 3.5rem 0 3rem;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  height: 80px;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border-line);
 }
 
 .brand {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-emblem {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--vermilion-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--vermilion);
-  border: 1px solid var(--vermilion-border);
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  gap: 0.75rem;
 }
 
 .brand-name {
-  font-size: 1.15rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
+  font-size: 1.25rem;
+  font-weight: 620;
+  letter-spacing: -0.025em;
   color: var(--ink);
-  line-height: 1.2;
 }
 
-.brand-subtitle {
-  font-size: 0.76rem;
-  color: var(--ink-muted);
-  letter-spacing: 0.02em;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  list-style: none;
-}
-
-.nav-link {
-  font-size: 0.92rem;
-  color: var(--ink-secondary);
-  font-weight: 500;
-  position: relative;
-  padding: 4px 0;
-}
-
-.nav-link:hover {
+.brand-dot {
   color: var(--vermilion);
+  font-size: 1.2rem;
 }
 
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn-contact {
-  padding: 8px 18px;
+.brand-desc {
   font-size: 0.88rem;
-  font-weight: 600;
-  border-radius: var(--radius-full);
-  background: var(--card-bg);
-  color: var(--ink);
-  border: 1px solid var(--border-delicate);
-  box-shadow: var(--shadow-subtle);
+  color: var(--ink-muted);
 }
 
-.btn-contact:hover {
-  border-color: var(--vermilion-border);
-  color: var(--vermilion);
-  transform: translateY(-1px);
-}
-
-/* ==========================================================================
-   Buttons & Badges (Refined, Curved, Tactile)
-   ========================================================================== */
-.btn {
-  display: inline-flex;
+nav {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 26px;
-  font-size: 0.94rem;
-  font-weight: 600;
-  border-radius: var(--radius-full);
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all var(--transition);
-  white-space: nowrap;
+  gap: 1.75rem;
+  font-size: 0.92rem;
 }
 
-.btn-primary {
-  background: var(--vermilion);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(197, 56, 48, 0.25);
+nav a {
+  color: var(--ink-muted);
 }
 
-.btn-primary:hover {
-  background: var(--vermilion-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 56, 48, 0.35);
-}
-
-.btn-secondary {
-  background: var(--card-bg);
+nav a:hover, nav a.active {
   color: var(--ink);
-  border-color: var(--border-delicate);
-  box-shadow: var(--shadow-subtle);
 }
 
-.btn-secondary:hover {
-  background: var(--card-hover);
-  border-color: var(--border-hover);
-  transform: translateY(-2px);
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
+.nav-contact-link {
+  color: var(--vermilion) !important;
   font-weight: 550;
-}
-
-.badge-status {
-  background: var(--card-bg);
-  color: var(--ink-secondary);
-  border: 1px solid var(--border-delicate);
-  box-shadow: var(--shadow-subtle);
-}
-
-.pulse-point {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--vermilion);
 }
 
 /* ==========================================================================
    Hero Section
    ========================================================================== */
-.hero-section {
-  padding: 80px 0 70px;
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--border-line);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.28fr) minmax(20rem, 0.72fr);
-  gap: clamp(3rem, 6vw, 5rem);
-  align-items: center;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.hero-title {
-  font-size: clamp(2.8rem, 5.2vw, 4.2rem);
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+.meta-lead {
+  font-size: 0.82rem;
+  color: var(--wisteria);
   font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.hero-title em {
+.hanko-mark {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--vermilion);
+  border-radius: 1px;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 4.8vw, 3.4rem);
+  margin-bottom: 1.75rem;
+  max-width: 24ch;
+  line-height: 1.15;
+}
+
+.hero h1 em {
   font-style: normal;
   color: var(--vermilion);
 }
 
-.hero-lead {
-  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+.hero-body {
+  font-size: clamp(1.1rem, 1.8vw, 1.26rem);
   color: var(--ink-secondary);
   line-height: 1.68;
-  max-width: 580px;
+  max-width: 44ch;
+  margin-bottom: 2.2rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-/* Personal Floating Card (Non-brutalist, elegant porcelain) */
-.hero-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-delicate);
-  border-radius: var(--radius-lg);
-  padding: 36px 32px;
-  box-shadow: var(--shadow-hover);
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-}
-
-.card-label {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 650;
-  color: var(--amber);
-}
-
-.card-title {
-  font-size: 1.35rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--ink);
-}
-
-.info-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.info-row {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border-delicate);
+  gap: 1.75rem;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.65rem 1.35rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 9999px;
   font-size: 0.92rem;
+  font-weight: 550;
+  transition: all var(--transition);
 }
 
-.info-row:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.link-btn:hover {
+  background: var(--vermilion);
+  color: #fff;
 }
 
-.info-label {
-  color: var(--ink-muted);
-}
-
-.info-val {
-  font-weight: 600;
+.text-action {
+  font-size: 0.95rem;
+  font-weight: 550;
   color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+  text-decoration-color: var(--border-line);
 }
 
-.pill {
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.pill-wisteria {
-  background: var(--wisteria-soft);
-  color: var(--wisteria);
-  border: 1px solid var(--wisteria-border);
-}
-
-.pill-amber {
-  background: var(--amber-soft);
-  color: var(--amber);
-  border: 1px solid var(--amber-border);
-}
-
-.card-quote {
-  padding: 14px 18px;
-  background: var(--silk);
-  border-radius: var(--radius-md);
-  font-size: 0.88rem;
-  color: var(--ink-secondary);
-  line-height: 1.55;
-  border-left: 3px solid var(--vermilion);
+.text-action:hover {
+  text-decoration-color: var(--vermilion);
+  color: var(--vermilion);
 }
 
 /* ==========================================================================
-   Section Shared
+   Editorial Sections
    ========================================================================== */
 .section {
-  padding: 90px 0;
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border-line);
 }
 
-.section-header {
-  margin-bottom: 48px;
-  max-width: 720px;
-}
-
-.section-tag {
+.section-label {
   font-size: 0.8rem;
-  font-weight: 650;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--amber);
-  margin-bottom: 12px;
-  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  display: block;
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.8vw, 2.9rem);
-  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 3.2vw, 2.3rem);
+  margin-bottom: 1.5rem;
+  max-width: 28ch;
 }
 
-.section-subtitle {
+.section-lead {
   font-size: 1.1rem;
   color: var(--ink-secondary);
+  max-width: 46ch;
+  margin-bottom: 2.5rem;
 }
 
 /* ==========================================================================
-   Duality Section: Empresaria & Desarrolladora
+   Dual Pillars: Empresaria & Desarrolladora
    ========================================================================== */
-.duality-grid {
+.pillar-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-.duality-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-delicate);
-  border-radius: var(--radius-lg);
-  padding: 44px 38px;
-  box-shadow: var(--shadow-subtle);
-  transition: all var(--transition);
-  display: flex;
-  flex-direction: column;
-}
-
-.duality-card:hover {
-  box-shadow: var(--shadow-hover);
-  border-color: var(--border-hover);
-  transform: translateY(-3px);
-}
-
-.duality-card.business {
-  border-top: 3px solid var(--wisteria);
-}
-
-.duality-card.dev {
-  border-top: 3px solid var(--vermilion);
-}
-
-.duality-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
+.pillar h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  font-size: 1.2rem;
+  gap: 10px;
 }
 
-.duality-card.business .duality-icon {
+.pillar-tag {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.pillar-tag.business {
   background: var(--wisteria-soft);
   color: var(--wisteria);
 }
 
-.duality-card.dev .duality-icon {
+.pillar-tag.dev {
   background: var(--vermilion-soft);
   color: var(--vermilion);
 }
 
-.duality-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
-
-.duality-desc {
-  font-size: 1rem;
+.pillar p {
+  font-size: 0.98rem;
+  line-height: 1.68;
   color: var(--ink-secondary);
-  line-height: 1.65;
-  margin-bottom: 28px;
+  margin-bottom: 1.5rem;
 }
 
-.duality-points {
+.bullet-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: auto;
+  gap: 0.9rem;
 }
 
-.duality-points li {
+.bullet-list li {
   font-size: 0.94rem;
   color: var(--ink-secondary);
   line-height: 1.6;
   position: relative;
-  padding-left: 24px;
+  padding-left: 1.4rem;
 }
 
-.duality-card.business li::before {
-  content: "";
+.bullet-list li::before {
+  content: "—";
   position: absolute;
-  left: 2px;
-  top: 9px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--wisteria);
+  left: 0;
+  color: var(--ink-muted);
 }
 
-.duality-card.dev li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 9px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--vermilion);
-}
-
-.duality-points strong {
+.bullet-list strong {
   color: var(--ink);
+  font-weight: 550;
 }
 
 /* ==========================================================================
-   Practice & Offerings (Curved Cards)
+   Curated Practice List (Editorial Rows)
    ========================================================================== */
-.practice-grid {
+.curated-list {
+  border-top: 1px solid var(--border-line);
+}
+
+.curated-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-line);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
 }
 
-.practice-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-delicate);
-  border-radius: var(--radius-md);
-  padding: 34px 30px;
-  box-shadow: var(--shadow-subtle);
-  transition: all var(--transition);
-  display: flex;
-  flex-direction: column;
-}
-
-.practice-card:hover {
-  box-shadow: var(--shadow-hover);
-  border-color: var(--border-hover);
-  transform: translateY(-2px);
-}
-
-.practice-number {
+.item-num {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--amber);
-  font-weight: 650;
-  margin-bottom: 14px;
+  font-weight: 600;
 }
 
-.practice-card h4 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+.item-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }
 
-.practice-card p {
+.item-content p {
   font-size: 0.96rem;
   color: var(--ink-secondary);
   line-height: 1.65;
-  margin-bottom: 22px;
+  margin-bottom: 0.4rem;
 }
 
-.practice-deliverable {
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid var(--border-delicate);
-  font-size: 0.88rem;
+.item-meta {
+  font-size: 0.84rem;
   color: var(--ink-muted);
-}
-
-.practice-deliverable strong {
-  color: var(--ink);
+  font-family: var(--font-mono);
 }
 
 /* ==========================================================================
-   Principles Section (Calm, Grounded, Organic)
+   Principles: Quiet, firm, understated
    ========================================================================== */
-.principles-section {
-  background: var(--silk-subtle);
-  border-radius: var(--radius-lg);
-  padding: 70px 48px;
-  margin: 20px 0;
-}
-
-.principles-grid {
+.principles-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
-  margin-top: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+  margin-top: 2rem;
 }
 
-.principle-item {
+.principle-entry h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
   gap: 8px;
 }
 
-.principle-num {
+.principle-entry h4 span {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--amber);
-  font-weight: 650;
+  font-weight: 600;
 }
 
-.principle-item h4 {
-  font-size: 1.25rem;
-}
-
-.principle-item p {
-  font-size: 0.95rem;
+.principle-entry p {
+  font-size: 0.94rem;
+  color: var(--ink-secondary);
   line-height: 1.65;
 }
 
 /* ==========================================================================
-   Contact Section (Warm, Welcoming, Fluid)
+   Contact Section
    ========================================================================== */
 .contact-section {
-  padding: 90px 0 100px;
+  padding: 5rem 0 2rem;
 }
 
-.contact-card {
-  background: var(--card-bg);
+.contact-box {
+  background: var(--bg-card);
   border: 1px solid var(--border-delicate);
-  border-radius: var(--radius-lg);
-  padding: 60px 50px;
-  box-shadow: var(--shadow-hover);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.contact-box h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.contact-box p {
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  max-width: 44ch;
+  margin-bottom: 2rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-line);
 }
 
-.contact-info h2 {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  margin-bottom: 16px;
-}
-
-.contact-info p {
-  font-size: 1.08rem;
-  max-width: 480px;
-}
-
-.contact-actions-box {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.channel-card {
-  background: var(--silk);
-  border: 1px solid var(--border-delicate);
-  border-radius: var(--radius-md);
-  padding: 16px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.channel-meta {
-  display: flex;
-  flex-direction: column;
-}
-
-.channel-label {
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.channel-val {
+.mail-link {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
-  color: var(--ink);
-  font-weight: 500;
-}
-
-.copy-button {
-  background: var(--card-bg);
-  border: 1px solid var(--border-delicate);
-  color: var(--ink);
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  transition: all var(--transition);
+  color: var(--vermilion);
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
 }
 
-.copy-button:hover {
-  border-color: var(--vermilion-border);
-  color: var(--vermilion);
+.mail-link:hover {
+  color: var(--vermilion-hover);
+}
+
+.social-link {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-link:hover {
+  color: var(--ink);
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
-  border-top: 1px solid var(--border-delicate);
-  padding: 48px 0;
-  background: var(--silk);
-}
-
-.footer-inner {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-line);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  font-size: 0.88rem;
+  gap: 1.5rem;
+  font-size: 0.85rem;
   color: var(--ink-muted);
-}
-
-.footer-inner a:hover {
-  color: var(--vermilion);
 }
 
 .footer-nav {
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
   list-style: none;
 }
 
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 960px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .duality-grid {
-    grid-template-columns: 1fr;
-  }
-  .practice-grid {
-    grid-template-columns: 1fr;
-  }
-  .principles-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .contact-card {
-    grid-template-columns: 1fr;
-    padding: 40px 30px;
-  }
-}
-
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 2.5rem 0 2rem;
   }
-  .principles-section {
-    padding: 44px 24px;
+  .hero {
+    padding: 3rem 0;
   }
-  .footer-inner {
+  .pillar-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .principles-list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .contact-box {
+    padding: 2rem 1.5rem;
+  }
+  .contact-methods {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .site-footer {
     flex-direction: column;
     align-items: flex-start;
   }
