@@ -1,43 +1,39 @@
 /* ==========================================================================
-   Kalista — Tears Mysthrala
-   Identity: Empresaria & Desarrolladora de Sistemas
-   Thematic & Chromatic Quartet:
-   - Kurogane (黒鉄): Hierro negro forjado, estructura y peso industrial
-   - Akkorokamui (朱神): Carmesí bermellón, defensa activa y profundidad
-   - Benten (弁才天): Seda, wisteria, elocuencia estratégica y sabiduría
-   - Raijin (雷神): Ámbar de trueno, energía eléctrica y tiempo real
+   Kalista — Tears Mysthrala | Personal Landing Page
+   Aesthetic Foundation:
+   - Palette inspired by Kurogane (iron ink), Akkorokamui (vermilion),
+     Benten (silk & wisteria plum), and Raijin (thunder amber).
+   - Architectural craft & typographic rigor matching MKDL standards.
    ========================================================================== */
 
 :root {
   color-scheme: light;
 
-  /* Silk & Paper Backgrounds (Benten) */
-  --silk: #f5f4ef;
-  --raised: #fbfaf7;
+  /* Benten: Silk & Natural Paper Canvas */
+  --silk: #f6f5f0;
+  --raised: #fcfbf8;
   --pure: #ffffff;
 
-  /* Kurogane (Forged Iron & Ink) */
-  --kurogane: #18191e;
-  --kurogane-soft: #2d2f38;
-  --kurogane-muted: #626572;
-  --kurogane-line: #d6d4cb;
-  --kurogane-line-subtle: #e5e3db;
+  /* Kurogane: Forged Iron & Cast Charcoal */
+  --iron: #191a1f;
+  --iron-soft: #2c2e37;
+  --iron-muted: #5e616c;
+  --iron-line: #d8d5cb;
+  --iron-line-soft: #e7e5dc;
 
-  /* Akkorokamui (Sacred Vermilion / Crimson) */
-  --akkoro: #b82828;
-  --akkoro-bright: #d43636;
-  --akkoro-deep: #7a1818;
-  --akkoro-wash: #f8ebeb;
+  /* Akkorokamui: Sacred Vermilion / Cinnabar */
+  --vermilion: #b92b27;
+  --vermilion-deep: #871c19;
+  --vermilion-soft: #f7ebea;
 
-  /* Raijin (Thunder Amber / Drum Gold) */
-  --raijin: #be7d22;
-  --raijin-spark: #dd9530;
-  --raijin-wash: #faf3e8;
+  /* Raijin: Thunder Amber / Drum Gold */
+  --amber: #be7d22;
+  --amber-soft: #faf2e6;
 
-  /* Benten (Wisteria & Celestial Plum) */
-  --benten: #594766;
-  --benten-deep: #352840;
-  --benten-wash: #ede7f2;
+  /* Benten Depth: Plum & Wisteria */
+  --plum: #382c42;
+  --plum-light: #584666;
+  --plum-wash: #eee8f3;
 
   --max: 76rem;
   --gutter: clamp(1.25rem, 4vw, 4rem);
@@ -58,7 +54,7 @@ html {
 body {
   margin: 0;
   background-color: var(--silk);
-  color: var(--kurogane);
+  color: var(--iron);
   font-family: var(--font-sans);
   line-height: 1.62;
   text-rendering: optimizeLegibility;
@@ -82,7 +78,7 @@ h1, h2, h3 {
   font-weight: 520;
   letter-spacing: -0.035em;
   line-height: 1.04;
-  color: var(--kurogane);
+  color: var(--iron);
 }
 
 .skip-link {
@@ -91,7 +87,7 @@ h1, h2, h3 {
   top: -5rem;
   z-index: 999;
   padding: 0.75rem 1rem;
-  background: var(--kurogane);
+  background: var(--iron);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -102,7 +98,7 @@ h1, h2, h3 {
 }
 
 a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--akkoro);
+  outline: 3px solid var(--vermilion);
   outline-offset: 4px;
 }
 
@@ -117,7 +113,7 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  border-bottom: 1px solid var(--kurogane-line);
+  border-bottom: 1px solid var(--iron-line);
 }
 
 .brand {
@@ -127,13 +123,13 @@ a:focus-visible, button:focus-visible {
   text-decoration: none;
 }
 
-.brand-crest {
+.brand-emblem {
   width: 32px;
   height: 32px;
   flex-shrink: 0;
 }
 
-.brand-identity {
+.brand-meta {
   display: flex;
   flex-direction: column;
 }
@@ -142,13 +138,13 @@ a:focus-visible, button:focus-visible {
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: -0.03em;
-  color: var(--kurogane);
+  color: var(--iron);
   line-height: 1.1;
 }
 
 .brand-title {
   font-size: 0.8rem;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -163,18 +159,18 @@ nav {
 nav a {
   text-decoration: none;
   transition: color 0.15s ease;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
 }
 
 nav a:hover {
-  color: var(--akkoro);
+  color: var(--vermilion);
 }
 
 .nav-contact {
-  border-bottom: 2px solid var(--akkoro);
+  border-bottom: 2px solid var(--vermilion);
   padding: 0.4rem 0;
   font-weight: 600;
-  color: var(--kurogane) !important;
+  color: var(--iron) !important;
 }
 
 /* ==========================================================================
@@ -192,7 +188,7 @@ nav a:hover {
 }
 
 .context {
-  color: var(--benten-deep);
+  color: var(--plum);
   font-size: 0.82rem;
   font-weight: 650;
   letter-spacing: 0.08em;
@@ -203,10 +199,10 @@ nav a:hover {
   gap: 8px;
 }
 
-.context-dot {
+.context-point {
   width: 6px;
   height: 6px;
-  background: var(--akkoro);
+  background: var(--vermilion);
   border-radius: 50%;
   display: inline-block;
 }
@@ -219,12 +215,12 @@ nav a:hover {
 
 .hero h1 em {
   font-style: normal;
-  color: var(--akkoro);
+  color: var(--vermilion);
 }
 
 .hero-lead {
   max-width: 44rem;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   font-size: clamp(1.1rem, 1.6vw, 1.35rem);
   line-height: 1.65;
 }
@@ -242,7 +238,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   min-height: 3.2rem;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   text-decoration: none;
   font-weight: 650;
   font-size: 0.95rem;
@@ -251,146 +247,137 @@ nav a:hover {
   cursor: pointer;
 }
 
-.button-akkoro {
-  background: var(--akkoro);
+.button-vermilion {
+  background: var(--vermilion);
   color: #ffffff;
 }
 
-.button-akkoro:hover {
-  background: var(--akkoro-deep);
+.button-vermilion:hover {
+  background: var(--vermilion-deep);
 }
 
 .button-iron {
-  background: var(--kurogane);
+  background: var(--iron);
   color: #ffffff;
 }
 
 .button-iron:hover {
-  background: var(--benten-deep);
+  background: var(--plum);
 }
 
 .text-link {
   text-underline-offset: 0.3em;
   font-weight: 600;
-  color: var(--kurogane);
+  color: var(--iron);
 }
 
 .text-link:hover {
-  color: var(--akkoro);
+  color: var(--vermilion);
 }
 
 /* ==========================================================================
-   Matrix of the Four Currents (Kurogane · Akkorokamui · Benten · Raijin)
-   This transforms the mythology into the 4 operational axes of Kalista
+   Personal Profile Record (Card / Expediente Personal)
    ========================================================================== */
-.four-forces-card {
+.profile-record {
   min-width: 0;
   margin: 0;
   align-self: center;
-  border-top: 4px solid var(--kurogane);
-  border-bottom: 1px solid var(--kurogane);
+  border-top: 4px solid var(--iron);
+  border-bottom: 1px solid var(--iron);
   background: var(--raised);
   padding: 1.5rem 0 0;
-  box-shadow: 1.25rem 1.25rem 0 rgba(24, 25, 30, 0.08);
+  box-shadow: 1.25rem 1.25rem 0 rgba(25, 26, 31, 0.08);
 }
 
-.matrix-head {
+.record-header {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   padding: 0 1.5rem 1rem;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-family: var(--font-mono);
 }
 
-.matrix-lead {
+.record-headline {
   margin: 1rem 1.5rem 1.8rem;
   font-size: clamp(1.45rem, 2.2vw, 1.95rem);
   font-weight: 540;
   letter-spacing: -0.035em;
   line-height: 1.12;
-  color: var(--kurogane);
+  color: var(--iron);
 }
 
-.matrix-list {
+.record-table {
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
-.matrix-list li {
+.record-table div {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
+  grid-template-columns: 1fr auto;
+  align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  border-top: 1px solid var(--kurogane-line-subtle);
+  border-top: 1px solid var(--iron-line-soft);
 }
 
-.force-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 650;
-  text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  letter-spacing: 0.04em;
+.record-table dt {
+  font-weight: 620;
+  font-size: 0.92rem;
+  color: var(--iron);
 }
 
-.force-tag.kurogane {
-  background: #e6e5e0;
-  color: var(--kurogane);
-  border-left: 3px solid var(--kurogane);
-}
-
-.force-tag.akkorokamui {
-  background: var(--akkoro-wash);
-  color: var(--akkoro);
-  border-left: 3px solid var(--akkoro);
-}
-
-.force-tag.benten {
-  background: var(--benten-wash);
-  color: var(--benten);
-  border-left: 3px solid var(--benten);
-}
-
-.force-tag.raijin {
-  background: var(--raijin-wash);
-  color: var(--raijin);
-  border-left: 3px solid var(--raijin);
-}
-
-.force-desc strong {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--kurogane);
-  margin-bottom: 2px;
-}
-
-.force-desc span {
-  font-size: 0.82rem;
-  color: var(--kurogane-muted);
-  line-height: 1.45;
-  display: block;
-}
-
-.matrix-footer {
+.record-table dd {
   margin: 0;
-  padding: 1.2rem 1.5rem;
-  background: var(--kurogane);
-  color: #f5f4ef;
-  font-size: 0.82rem;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 0.28rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-pill.founder {
+  background: var(--plum-wash);
+  border-left: 3px solid var(--plum);
+  color: var(--plum);
+}
+
+.status-pill.systems {
+  background: var(--vermilion-soft);
+  border-left: 3px solid var(--vermilion);
+  color: var(--vermilion);
+}
+
+.status-pill.neutral {
+  background: #e7e5dc;
+  border-left: 3px solid #6b6e79;
+  color: var(--iron);
+}
+
+.status-pill.ethos {
+  background: var(--amber-soft);
+  border-left: 3px solid var(--amber);
+  color: var(--amber);
+}
+
+.record-footer {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--iron);
+  color: #f6f5f0;
+  font-size: 0.84rem;
   line-height: 1.5;
 }
 
 /* ==========================================================================
-   Full Bleed Statement (Benten Wisteria / Silk Deep)
+   Full Bleed Statement (Benten Plum Deep)
    ========================================================================== */
 .statement {
-  background: var(--benten-deep);
+  background: var(--plum);
   color: #fff;
   padding: clamp(4rem, 8vw, 7.5rem) max(var(--gutter), calc((100vw - var(--max)) / 2));
 }
@@ -424,7 +411,7 @@ nav a:hover {
 }
 
 .section-index {
-  color: var(--raijin);
+  color: var(--amber);
   font-size: 0.82rem;
   font-weight: 650;
   letter-spacing: 0.06em;
@@ -448,7 +435,7 @@ nav a:hover {
 
 .duality-col > p:last-child {
   max-width: 36rem;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   font-size: 1.08rem;
   line-height: 1.65;
 }
@@ -457,7 +444,7 @@ nav a:hover {
   margin: 2.5rem 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--kurogane-line);
+  border-top: 1px solid var(--iron-line);
 }
 
 .duality-items li {
@@ -465,29 +452,29 @@ nav a:hover {
   grid-template-columns: 2.5rem 1fr;
   gap: 1.25rem;
   padding: 1.5rem 0;
-  border-bottom: 1px solid var(--kurogane-line);
+  border-bottom: 1px solid var(--iron-line);
 }
 
 .duality-items span {
-  color: var(--akkoro);
+  color: var(--vermilion);
   font-family: var(--font-mono);
   font-size: 0.88rem;
   font-weight: 600;
 }
 
 .duality-items.dev span {
-  color: var(--raijin);
+  color: var(--amber);
 }
 
 .duality-items h4 {
   margin-bottom: 0.35rem;
   font-size: 1.22rem;
-  color: var(--kurogane);
+  color: var(--iron);
 }
 
 .duality-items p {
   margin-bottom: 0;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   font-size: 0.96rem;
 }
 
@@ -495,7 +482,7 @@ nav a:hover {
    Facets List (Editorial Rows with Diamond Marker)
    ========================================================================== */
 .facet-list {
-  border-top: 1px solid var(--kurogane-line);
+  border-top: 1px solid var(--iron-line);
 }
 
 .facet-list article {
@@ -503,7 +490,7 @@ nav a:hover {
   grid-template-columns: minmax(0, 1fr) minmax(13rem, 0.48fr);
   gap: clamp(2rem, 6vw, 7rem);
   padding: 2.4rem 0;
-  border-bottom: 1px solid var(--kurogane-line);
+  border-bottom: 1px solid var(--iron-line);
   align-items: start;
 }
 
@@ -520,20 +507,20 @@ nav a:hover {
   left: 0.15rem;
   width: 0.55rem;
   height: 0.55rem;
-  background: var(--akkoro);
+  background: var(--vermilion);
   content: "";
   transform: translateY(-50%) rotate(45deg);
 }
 
 .facet-list.builder h3::before {
-  background: var(--raijin);
+  background: var(--amber);
 }
 
 .facet-list article div p {
   max-width: 44rem;
   margin-bottom: 0;
   padding-left: 2rem;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   font-size: 1.05rem;
   line-height: 1.65;
 }
@@ -541,25 +528,25 @@ nav a:hover {
 .facet-output {
   margin: 0.45rem 0 0;
   padding-left: 1rem;
-  border-left: 2px solid var(--akkoro);
-  color: var(--akkoro-deep);
+  border-left: 2px solid var(--vermilion);
+  color: var(--vermilion-deep);
   font-size: 0.88rem;
   font-weight: 600;
 }
 
 .facet-list.builder .facet-output {
-  border-color: var(--raijin);
-  color: var(--raijin);
+  border-color: var(--amber);
+  color: var(--amber);
 }
 
 /* ==========================================================================
-   Principles: Kurogane Dark Slate Block
+   Principles: Kurogane Cast Slate Block
    ========================================================================== */
 .principles {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
   gap: clamp(3rem, 8vw, 8rem);
-  background: var(--kurogane);
+  background: var(--iron);
   color: #fff;
 }
 
@@ -569,7 +556,7 @@ nav a:hover {
 }
 
 .principles .section-index {
-  color: var(--raijin-spark);
+  color: var(--amber);
 }
 
 .principles-lead {
@@ -583,18 +570,18 @@ nav a:hover {
   margin: 3rem 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #3d404d;
+  border-top: 1px solid #3c3e49;
 }
 
 .principles-list li {
   display: grid;
   grid-template-columns: 3.5rem 1fr;
   padding: 1.4rem 0;
-  border-bottom: 1px solid #3d404d;
+  border-bottom: 1px solid #3c3e49;
 }
 
 .principles-list li span {
-  color: var(--raijin-spark);
+  color: var(--amber);
   font-family: var(--font-mono);
   font-size: 0.88rem;
 }
@@ -616,7 +603,7 @@ nav a:hover {
    Contact Section (Akkorokamui Vermilion Bleed)
    ========================================================================== */
 .contact {
-  background: var(--akkoro);
+  background: var(--vermilion);
   color: #fff;
 }
 
@@ -651,7 +638,7 @@ nav a:hover {
 
 .button-white {
   background: #ffffff;
-  color: var(--kurogane);
+  color: var(--iron);
 }
 
 .button-white:hover {
@@ -677,7 +664,7 @@ footer {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 3rem;
   align-items: end;
-  border-top: 1px solid var(--kurogane-line);
+  border-top: 1px solid var(--iron-line);
 }
 
 .footer-info p:first-child {
@@ -687,7 +674,7 @@ footer {
 }
 
 .footer-info p:last-child {
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
   font-size: 0.88rem;
   margin-bottom: 0;
 }
@@ -702,11 +689,11 @@ footer {
 
 .footer-links a {
   text-decoration: none;
-  color: var(--kurogane-muted);
+  color: var(--iron-muted);
 }
 
 .footer-links a:hover {
-  color: var(--akkoro);
+  color: var(--vermilion);
 }
 
 /* ==========================================================================
