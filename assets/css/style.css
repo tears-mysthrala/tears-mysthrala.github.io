@@ -1,33 +1,48 @@
 /* ==========================================================================
-   Kalista — Tears Mysthrala | Personal Landing Page
-   Design System & Heritage inspired by MKDL (Bajo Deba)
-   Palette: Paper, Raised, Ink, Violet, Copper, Crimson, Gold
+   Kalista — Tears Mysthrala
+   Identity: Empresaria & Desarrolladora de Sistemas
+   Thematic & Chromatic Quartet:
+   - Kurogane (黒鉄): Hierro negro forjado, estructura y peso industrial
+   - Akkorokamui (朱神): Carmesí bermellón, defensa activa y profundidad
+   - Benten (弁才天): Seda, wisteria, elocuencia estratégica y sabiduría
+   - Raijin (雷神): Ámbar de trueno, energía eléctrica y tiempo real
    ========================================================================== */
 
 :root {
   color-scheme: light;
-  --paper: #ecebea;
-  --raised: #f6f5f3;
-  --ink: #202227;
-  --muted: #60636a;
-  --line: #c9c7c4;
-  --line-strong: #9c9a96;
 
-  /* Benten: Violet & Silk */
-  --violet: #705886;
-  --violet-deep: #3d3049;
-  --violet-soft: #e8e2ec;
+  /* Silk & Paper Backgrounds (Benten) */
+  --silk: #f5f4ef;
+  --raised: #fbfaf7;
+  --pure: #ffffff;
 
-  /* Akkorokamui & Raijin: Copper, Crimson & Gold */
-  --copper: #a15538;
-  --copper-soft: #efe1dc;
-  --crimson: #9e2a2b;
-  --gold: #b37d2e;
-  --dark: #242329;
+  /* Kurogane (Forged Iron & Ink) */
+  --kurogane: #18191e;
+  --kurogane-soft: #2d2f38;
+  --kurogane-muted: #626572;
+  --kurogane-line: #d6d4cb;
+  --kurogane-line-subtle: #e5e3db;
+
+  /* Akkorokamui (Sacred Vermilion / Crimson) */
+  --akkoro: #b82828;
+  --akkoro-bright: #d43636;
+  --akkoro-deep: #7a1818;
+  --akkoro-wash: #f8ebeb;
+
+  /* Raijin (Thunder Amber / Drum Gold) */
+  --raijin: #be7d22;
+  --raijin-spark: #dd9530;
+  --raijin-wash: #faf3e8;
+
+  /* Benten (Wisteria & Celestial Plum) */
+  --benten: #594766;
+  --benten-deep: #352840;
+  --benten-wash: #ede7f2;
 
   --max: 76rem;
   --gutter: clamp(1.25rem, 4vw, 4rem);
-  --font-sans: "Aptos", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+
+  --font-sans: "Aptos", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
@@ -42,10 +57,10 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background-color: var(--silk);
+  color: var(--kurogane);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.62;
   text-rendering: optimizeLegibility;
   letter-spacing: -0.01em;
 }
@@ -67,7 +82,7 @@ h1, h2, h3 {
   font-weight: 520;
   letter-spacing: -0.035em;
   line-height: 1.04;
-  color: var(--ink);
+  color: var(--kurogane);
 }
 
 .skip-link {
@@ -76,7 +91,7 @@ h1, h2, h3 {
   top: -5rem;
   z-index: 999;
   padding: 0.75rem 1rem;
-  background: var(--ink);
+  background: var(--kurogane);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -87,42 +102,55 @@ h1, h2, h3 {
 }
 
 a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--copper);
+  outline: 3px solid var(--akkoro);
   outline-offset: 4px;
 }
 
 /* ==========================================================================
-   Header & Nav
+   Header & Navigation
    ========================================================================== */
 .site-header {
   width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  min-height: 7rem;
+  min-height: 7.5rem;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--kurogane-line);
 }
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 1rem;
   text-decoration: none;
 }
 
-.brand-name {
-  font-size: 1.45rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--ink);
+.brand-crest {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
 }
 
-.brand-tag {
-  font-size: 0.85rem;
-  color: var(--muted);
-  letter-spacing: 0.02em;
+.brand-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--kurogane);
+  line-height: 1.1;
+}
+
+.brand-title {
+  font-size: 0.8rem;
+  color: var(--kurogane-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 nav {
@@ -135,16 +163,18 @@ nav {
 nav a {
   text-decoration: none;
   transition: color 0.15s ease;
+  color: var(--kurogane-muted);
 }
 
-nav a:not(.nav-contact):hover {
-  color: var(--violet);
+nav a:hover {
+  color: var(--akkoro);
 }
 
 .nav-contact {
-  border-bottom: 2px solid var(--copper);
-  padding: 0.45rem 0;
+  border-bottom: 2px solid var(--akkoro);
+  padding: 0.4rem 0;
   font-weight: 600;
+  color: var(--kurogane) !important;
 }
 
 /* ==========================================================================
@@ -152,22 +182,33 @@ nav a:not(.nav-contact):hover {
    ========================================================================== */
 .hero {
   width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  min-height: calc(100vh - 7rem);
+  min-height: calc(100vh - 7.5rem);
   margin: auto;
   padding: clamp(4rem, 9vh, 7.5rem) 0;
   display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(19rem, 0.78fr);
-  gap: clamp(3rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  gap: clamp(3rem, 5vw, 5.5rem);
   align-items: center;
 }
 
-.context, .section-index {
-  color: var(--violet-deep);
+.context {
+  color: var(--benten-deep);
   font-size: 0.82rem;
   font-weight: 650;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.context-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--akkoro);
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .hero h1 {
@@ -178,13 +219,13 @@ nav a:not(.nav-contact):hover {
 
 .hero h1 em {
   font-style: normal;
-  color: var(--copper);
+  color: var(--akkoro);
 }
 
 .hero-lead {
   max-width: 44rem;
-  color: var(--muted);
-  font-size: clamp(1.08rem, 1.6vw, 1.32rem);
+  color: var(--kurogane-muted);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
   line-height: 1.65;
 }
 
@@ -193,7 +234,7 @@ nav a:not(.nav-contact):hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 2.3rem;
+  margin-top: 2.4rem;
 }
 
 .button {
@@ -201,7 +242,7 @@ nav a:not(.nav-contact):hover {
   align-items: center;
   justify-content: center;
   min-height: 3.2rem;
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem 1.5rem;
   text-decoration: none;
   font-weight: 650;
   font-size: 0.95rem;
@@ -210,158 +251,162 @@ nav a:not(.nav-contact):hover {
   cursor: pointer;
 }
 
-.button-primary {
-  background: var(--ink);
-  color: #fff;
+.button-akkoro {
+  background: var(--akkoro);
+  color: #ffffff;
 }
 
-.button-primary:hover {
-  background: var(--violet-deep);
+.button-akkoro:hover {
+  background: var(--akkoro-deep);
 }
 
-.button-copper {
-  background: var(--copper);
-  color: #fff;
+.button-iron {
+  background: var(--kurogane);
+  color: #ffffff;
 }
 
-.button-copper:hover {
-  background: var(--crimson);
+.button-iron:hover {
+  background: var(--benten-deep);
 }
 
 .text-link {
   text-underline-offset: 0.3em;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--kurogane);
 }
 
 .text-link:hover {
-  color: var(--violet);
+  color: var(--akkoro);
 }
 
 /* ==========================================================================
-   Personal Position Record (Ficha / Archival Card)
+   Matrix of the Four Currents (Kurogane · Akkorokamui · Benten · Raijin)
+   This transforms the mythology into the 4 operational axes of Kalista
    ========================================================================== */
-.position-record {
+.four-forces-card {
   min-width: 0;
   margin: 0;
   align-self: center;
-  border-top: 4px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-top: 4px solid var(--kurogane);
+  border-bottom: 1px solid var(--kurogane);
   background: var(--raised);
-  padding: 1.25rem 0 0;
-  box-shadow: 1.25rem 1.25rem 0 rgba(112, 88, 134, 0.14);
+  padding: 1.5rem 0 0;
+  box-shadow: 1.25rem 1.25rem 0 rgba(24, 25, 30, 0.08);
 }
 
-.record-head {
+.matrix-head {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0 1.25rem 1rem;
-  color: var(--muted);
+  padding: 0 1.5rem 1rem;
+  color: var(--kurogane-muted);
   font-size: 0.74rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.record-head span:last-child {
-  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
   font-family: var(--font-mono);
 }
 
-.record-quote {
-  max-width: 18ch;
-  margin: 1.5rem 1.25rem 2rem;
-  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+.matrix-lead {
+  margin: 1rem 1.5rem 1.8rem;
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
   font-weight: 540;
   letter-spacing: -0.035em;
-  line-height: 1.1;
-  color: var(--ink);
+  line-height: 1.12;
+  color: var(--kurogane);
 }
 
-.position-record dl {
+.matrix-list {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.position-record dl div {
+.matrix-list li {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
+  grid-template-columns: auto 1fr;
+  align-items: start;
   gap: 1rem;
-  padding: 0.95rem 1.25rem;
-  border-top: 1px solid var(--line);
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--kurogane-line-subtle);
 }
 
-.position-record dt {
-  font-weight: 620;
-  font-size: 0.92rem;
-  color: var(--ink);
+.force-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  letter-spacing: 0.04em;
 }
 
-.position-record dd {
+.force-tag.kurogane {
+  background: #e6e5e0;
+  color: var(--kurogane);
+  border-left: 3px solid var(--kurogane);
+}
+
+.force-tag.akkorokamui {
+  background: var(--akkoro-wash);
+  color: var(--akkoro);
+  border-left: 3px solid var(--akkoro);
+}
+
+.force-tag.benten {
+  background: var(--benten-wash);
+  color: var(--benten);
+  border-left: 3px solid var(--benten);
+}
+
+.force-tag.raijin {
+  background: var(--raijin-wash);
+  color: var(--raijin);
+  border-left: 3px solid var(--raijin);
+}
+
+.force-desc strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--kurogane);
+  margin-bottom: 2px;
+}
+
+.force-desc span {
+  font-size: 0.82rem;
+  color: var(--kurogane-muted);
+  line-height: 1.45;
+  display: block;
+}
+
+.matrix-footer {
   margin: 0;
-}
-
-.status-badge {
-  display: inline-block;
-  padding: 0.28rem 0.55rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.status-badge.founder {
-  background: var(--violet-soft);
-  border-left: 3px solid var(--violet);
-  color: var(--violet-deep);
-}
-
-.status-badge.dev {
-  background: var(--copper-soft);
-  border-left: 3px solid var(--copper);
-  color: var(--copper);
-}
-
-.status-badge.location {
-  background: #e6e4df;
-  border-left: 3px solid #69675f;
-  color: var(--ink);
-}
-
-.status-badge.ethos {
-  background: #dde7e3;
-  border-left: 3px solid #527566;
-  color: #2e4b3e;
-}
-
-.record-note {
-  margin: 0;
-  padding: 1.3rem 1.25rem;
-  background: var(--ink);
-  color: #d9d7da;
-  font-size: 0.84rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--kurogane);
+  color: #f5f4ef;
+  font-size: 0.82rem;
   line-height: 1.5;
 }
 
 /* ==========================================================================
-   Statement Section (Full bleed deep violet banner)
+   Full Bleed Statement (Benten Wisteria / Silk Deep)
    ========================================================================== */
 .statement {
-  background: var(--violet-deep);
+  background: var(--benten-deep);
   color: #fff;
   padding: clamp(4rem, 8vw, 7.5rem) max(var(--gutter), calc((100vw - var(--max)) / 2));
 }
 
 .statement p {
-  max-width: 32ch;
-  margin-bottom: 0.5rem;
+  max-width: 33ch;
+  margin-bottom: 0.6rem;
   font-size: clamp(1.75rem, 3.8vw, 3.5rem);
   letter-spacing: -0.035em;
-  line-height: 1.14;
+  line-height: 1.15;
   font-weight: 520;
 }
 
 .statement p:last-child {
   margin-left: auto;
-  color: #d9cede;
+  color: #e4dceb;
 }
 
 /* ==========================================================================
@@ -378,76 +423,23 @@ nav a:not(.nav-contact):hover {
   margin-bottom: 4rem;
 }
 
+.section-index {
+  color: var(--raijin);
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .section-heading h2 {
-  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
   max-width: 14ch;
 }
 
 /* ==========================================================================
-   Editorial Work / Facet List
+   Duality Grid: Empresaria & Dev (Raised Background)
    ========================================================================== */
-.facet-list {
-  border-top: 1px solid var(--line);
-}
-
-.facet-list article {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(13rem, 0.48fr);
-  gap: clamp(2rem, 6vw, 7rem);
-  padding: 2.4rem 0;
-  border-bottom: 1px solid var(--line);
-  align-items: start;
-}
-
-.facet-list h3 {
-  position: relative;
-  margin-bottom: 0.75rem;
-  padding-left: 2rem;
-  font-size: clamp(1.45rem, 2.3vw, 1.95rem);
-}
-
-.facet-list h3::before {
-  position: absolute;
-  top: 0.52em;
-  left: 0.15rem;
-  width: 0.58rem;
-  height: 0.58rem;
-  background: var(--violet);
-  content: "";
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.facet-list.builder h3::before {
-  background: var(--copper);
-}
-
-.facet-list article div p {
-  max-width: 44rem;
-  margin-bottom: 0;
-  padding-left: 2rem;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
-
-.facet-output {
-  margin: 0.45rem 0 0;
-  padding-left: 1rem;
-  border-left: 2px solid var(--violet);
-  color: var(--violet-deep);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.facet-list.builder .facet-output {
-  border-color: var(--copper);
-  color: var(--copper);
-}
-
-/* ==========================================================================
-   Two-Column Focus Section (El Encuentro)
-   ========================================================================== */
-.duality-grid {
+.duality-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 8vw, 7rem);
@@ -456,7 +448,7 @@ nav a:not(.nav-contact):hover {
 
 .duality-col > p:last-child {
   max-width: 36rem;
-  color: var(--muted);
+  color: var(--kurogane-muted);
   font-size: 1.08rem;
   line-height: 1.65;
 }
@@ -465,7 +457,7 @@ nav a:not(.nav-contact):hover {
   margin: 2.5rem 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--kurogane-line);
 }
 
 .duality-items li {
@@ -473,36 +465,101 @@ nav a:not(.nav-contact):hover {
   grid-template-columns: 2.5rem 1fr;
   gap: 1.25rem;
   padding: 1.5rem 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--kurogane-line);
 }
 
 .duality-items span {
-  color: var(--copper);
+  color: var(--akkoro);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
+}
+
+.duality-items.dev span {
+  color: var(--raijin);
 }
 
 .duality-items h4 {
   margin-bottom: 0.35rem;
-  font-size: 1.25rem;
-  color: var(--ink);
+  font-size: 1.22rem;
+  color: var(--kurogane);
 }
 
 .duality-items p {
   margin-bottom: 0;
-  color: var(--muted);
+  color: var(--kurogane-muted);
   font-size: 0.96rem;
 }
 
 /* ==========================================================================
-   Principles Grid
+   Facets List (Editorial Rows with Diamond Marker)
+   ========================================================================== */
+.facet-list {
+  border-top: 1px solid var(--kurogane-line);
+}
+
+.facet-list article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 0.48fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--kurogane-line);
+  align-items: start;
+}
+
+.facet-list h3 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+}
+
+.facet-list h3::before {
+  position: absolute;
+  top: 0.52em;
+  left: 0.15rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--akkoro);
+  content: "";
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.facet-list.builder h3::before {
+  background: var(--raijin);
+}
+
+.facet-list article div p {
+  max-width: 44rem;
+  margin-bottom: 0;
+  padding-left: 2rem;
+  color: var(--kurogane-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.facet-output {
+  margin: 0.45rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--akkoro);
+  color: var(--akkoro-deep);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.facet-list.builder .facet-output {
+  border-color: var(--raijin);
+  color: var(--raijin);
+}
+
+/* ==========================================================================
+   Principles: Kurogane Dark Slate Block
    ========================================================================== */
 .principles {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
   gap: clamp(3rem, 8vw, 8rem);
-  background: var(--dark);
+  background: var(--kurogane);
   color: #fff;
 }
 
@@ -512,7 +569,7 @@ nav a:not(.nav-contact):hover {
 }
 
 .principles .section-index {
-  color: #b9a4c7;
+  color: var(--raijin-spark);
 }
 
 .principles-lead {
@@ -526,20 +583,20 @@ nav a:not(.nav-contact):hover {
   margin: 3rem 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #4a4750;
+  border-top: 1px solid #3d404d;
 }
 
 .principles-list li {
   display: grid;
-  grid-template-columns: 3rem 1fr;
-  padding: 1.35rem 0;
-  border-bottom: 1px solid #4a4750;
+  grid-template-columns: 3.5rem 1fr;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #3d404d;
 }
 
 .principles-list li span {
-  color: var(--copper-soft);
+  color: var(--raijin-spark);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .principles-list h4 {
@@ -550,23 +607,23 @@ nav a:not(.nav-contact):hover {
 
 .principles-list p {
   margin: 0;
-  color: #b0adb5;
+  color: #b0adb8;
   font-size: 0.94rem;
   line-height: 1.6;
 }
 
 /* ==========================================================================
-   Contact Section (Copper full-bleed)
+   Contact Section (Akkorokamui Vermilion Bleed)
    ========================================================================== */
 .contact {
-  background: var(--copper);
+  background: var(--akkoro);
   color: #fff;
 }
 
 .contact > p {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -578,9 +635,9 @@ nav a:not(.nav-contact):hover {
 }
 
 .contact-lead {
-  max-width: 42rem;
+  max-width: 44rem;
   font-size: 1.15rem;
-  color: #f7e6e0;
+  color: #fcedec;
   line-height: 1.65;
 }
 
@@ -592,17 +649,17 @@ nav a:not(.nav-contact):hover {
   margin-top: 3rem;
 }
 
-.button-light {
-  background: #fff;
-  color: var(--ink);
+.button-white {
+  background: #ffffff;
+  color: var(--kurogane);
 }
 
-.button-light:hover {
-  background: var(--paper);
+.button-white:hover {
+  background: var(--silk);
 }
 
 .contact-direct {
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
   text-underline-offset: 0.3em;
   font-family: var(--font-mono);
@@ -620,17 +677,17 @@ footer {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 3rem;
   align-items: end;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--kurogane-line);
 }
 
 .footer-info p:first-child {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
 .footer-info p:last-child {
-  color: var(--muted);
+  color: var(--kurogane-muted);
   font-size: 0.88rem;
   margin-bottom: 0;
 }
@@ -645,11 +702,11 @@ footer {
 
 .footer-links a {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--kurogane-muted);
 }
 
 .footer-links a:hover {
-  color: var(--ink);
+  color: var(--akkoro);
 }
 
 /* ==========================================================================
@@ -669,7 +726,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
-  .duality-grid {
+  .duality-section {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
