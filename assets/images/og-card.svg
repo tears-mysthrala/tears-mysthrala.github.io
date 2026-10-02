@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#060911"/>
+    </linearGradient>
+    <linearGradient id="primary-grad" x1="100" y1="100" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.4"/>
+    </pattern>
+    <radialGradient id="glow" cx="600" cy="200" r="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Border Frame -->
+  <rect x="30" y="30" width="1140" height="570" rx="16" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Logo Mark -->
+  <g transform="translate(100, 100) scale(1.3)">
+    <polygon points="32,4 58,16 58,38 32,59 6,38 6,16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M17 40V22L32 34L47 22V40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M25 40V30L32 35L39 30V40" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="18" r="2.5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Tag / Badge -->
+  <rect x="200" y="112" width="290" height="38" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+  <text x="215" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#38bdf8" letter-spacing="1.5">MYSTHRALA KUROGANE DEFENSE LABS</text>
+
+  <!-- Title -->
+  <text x="100" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="#f8fafc" letter-spacing="-1">
+    Kalista — Tears Mysthrala
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="url(#primary-grad)">
+    Empresaria · Consultora OT / ICS · Systems &amp; Software Dev
+  </text>
+
+  <!-- Description -->
+  <text x="100" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#94a3b8" line-height="1.5">
+    Ciberseguridad en entornos industriales críticos, análisis forense DFIR,
+  </text>
+  <text x="100" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#94a3b8">
+    arquitecturas tolerantes a fallos y software auditable local-first.
+  </text>
+
+  <!-- Footer Info -->
+  <line x1="100" y1="480" x2="1100" y2="480" stroke="#334155" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="530" font-family="monospace" font-size="18" fill="#38bdf8">mysthrala.com</text>
+  <text x="350" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#64748b">github.com/tears-mysthrala</text>
+  <text x="750" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#64748b">Castellano · Euskara · English</text>
+</svg>
