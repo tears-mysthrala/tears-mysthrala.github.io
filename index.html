@@ -7,7 +7,7 @@
   
   <meta name="description" content="Página personal de Kalista (Tears Mysthrala). Empresaria y desarrolladora de sistemas. Ciberseguridad industrial (OT/ICS), criterio de negocio, DFIR y software local-first.">
   <meta name="author" content="Kalista (Tears Mysthrala)">
-  <meta name="theme-color" content="#f7f6f2">
+  <meta name="theme-color" content="#faf8f5">
   <link rel="canonical" href="https://mysthrala.com/">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
@@ -30,6 +30,7 @@
     <div class="brand">
       <a href="#inicio" class="brand-link">
         <span class="brand-name">Kalista</span>
+        <span class="brand-sep" aria-hidden="true">·</span>
         <span class="brand-sub">Tears Mysthrala</span>
       </a>
     </div>
@@ -46,7 +47,7 @@
     <!-- Hero -->
     <section class="hero" id="inicio">
       <div class="hero-copy">
-        <p class="context">Identidad personal · Dirección &amp; Sistemas</p>
+        <p class="context">Criterio de Dirección &amp; Sistemas</p>
         <h1>
           Criterio de negocio en la dirección.
           <em>Rigor técnico en el código.</em>
@@ -60,7 +61,7 @@
         </div>
       </div>
 
-      <figure class="profile-card" aria-label="Síntesis de perfil">
+      <div class="profile-card" aria-label="Síntesis de perfil">
         <div class="card-head">
           <span>Identidad</span>
           <span>Empresaria &amp; Desarrolladora</span>
@@ -85,13 +86,19 @@
         <p class="card-foot">
           Fundadora de MKDL · Práctica privada de consultoría e ingeniería
         </p>
-      </figure>
+      </div>
     </section>
 
-    <!-- Declaración / Statement -->
-    <section class="statement" aria-label="Declaración de postura">
-      <p>Ni comerciales que desconocen la planta ni técnicos ajenos al balance.</p>
-      <p>Criterio de dirección forjado en el código y en la realidad de la fábrica.</p>
+    <!-- Declaración / Editorial Quote -->
+    <section class="quote-statement" aria-label="Declaración de postura">
+      <blockquote>
+        <p class="quote-main">
+          «Ni comerciales que desconocen la planta, ni técnicos ajenos al balance.»
+        </p>
+        <p class="quote-sub">
+          Criterio de dirección forjado en el código y en la realidad de la fábrica.
+        </p>
+      </blockquote>
     </section>
 
     <!-- Perfil Dual: El Punto de Encuentro -->
@@ -149,7 +156,7 @@
     </section>
 
     <!-- Dirección & Consultoría OT -->
-    <section class="section practice-section" id="direccion">
+    <section class="section" id="direccion">
       <div class="section-heading">
         <p class="section-index">Dirección &amp; Entorno Industrial</p>
         <h2>Defensa y continuidad operativa en planta</h2>
@@ -163,7 +170,7 @@
               Mapeo pasivo de activos según el modelo Purdue, detección de enlaces no autorizados entre IT y OT, y aislamiento de controladores críticos sin introducir latencia en las líneas productivas.
             </p>
           </div>
-          <p class="practice-outcome">Aislamiento de la línea de producción</p>
+          <div class="practice-tag">Aislamiento de planta</div>
         </article>
 
         <article class="practice-item">
@@ -173,7 +180,7 @@
               Intervención en planta ante anomalías, sospechas de intrusión o situaciones de extorsión. Triage rápido en memoria preservando rigurosamente la cadena de custodia y la marcha de los procesos.
             </p>
           </div>
-          <p class="practice-outcome">Erradicación sin destrucción de evidencia</p>
+          <div class="practice-tag">Contención &amp; Evidencia</div>
         </article>
 
         <article class="practice-item">
@@ -183,7 +190,7 @@
               Traducción pragmática de las obligaciones regulatorias a controles técnicos aplicables en el taller o la planta, listos para auditoría y sin introducir parálisis documental.
             </p>
           </div>
-          <p class="practice-outcome">Cumplimiento técnico auditable</p>
+          <div class="practice-tag">Conformidad técnica</div>
         </article>
 
         <article class="practice-item">
@@ -193,13 +200,13 @@
               Criterio experto independiente antes de acometer proyectos de digitalización industrial, adquisición de maquinaria conectada o contratación de servicios externos.
             </p>
           </div>
-          <p class="practice-outcome">Protección del patrimonio y autonomía</p>
+          <div class="practice-tag">Independencia</div>
         </article>
       </div>
     </section>
 
     <!-- Desarrollo & Sistemas -->
-    <section class="section practice-section" id="desarrollo">
+    <section class="section" id="desarrollo">
       <div class="section-heading">
         <p class="section-index">Desarrollo &amp; Sistemas</p>
         <h2>Código auditable, investigación forense y resiliencia</h2>
@@ -213,7 +220,7 @@
               Investigación aplicada sobre Volatility 3 y desarrollo de herramientas docentes (como la iniciativa <em>Oroitz</em>) enfocadas en mantener al analista al mando del análisis forense en memoria RAM.
             </p>
           </div>
-          <p class="practice-outcome">Investigación en memoria &amp; Oroitz</p>
+          <div class="practice-tag">DFIR &amp; Oroitz</div>
         </article>
 
         <article class="practice-item">
@@ -223,7 +230,7 @@
               Arquitecturas concurrentes construidas sobre la máquina virtual BEAM con Elixir y OTP. Procesos ligeros, supervisores aislados y resiliencia estructural por diseño.
             </p>
           </div>
-          <p class="practice-outcome">Elixir / OTP &amp; Concurrencia</p>
+          <div class="practice-tag">Elixir &amp; OTP</div>
         </article>
 
         <article class="practice-item">
@@ -233,13 +240,13 @@
               Automatización mediante scripts declarativos para entornos Linux y PowerShell en Windows. Configuración de puestos de análisis endurecidos, auditables y sin telemetría externa.
             </p>
           </div>
-          <p class="practice-outcome">Hardening modular &amp; Local-First</p>
+          <div class="practice-tag">Hardening &amp; Local-First</div>
         </article>
       </div>
     </section>
 
     <!-- Principios -->
-    <section class="section principles-section" id="principios">
+    <section class="section" id="principios">
       <div class="section-heading">
         <p class="section-index">Fundamentos</p>
         <h2>Principios de actuación</h2>
@@ -276,25 +283,23 @@
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- Contacto (Sereno, cálido y sin bloques oscuros brutales) -->
     <section class="contact-section" id="contacto">
-      <div class="contact-wrap">
-        <div class="contact-copy">
-          <p class="section-index" style="color: rgba(255, 255, 255, 0.75);">Contacto directo</p>
-          <h2>Iniciemos una conversación</h2>
-          <p class="contact-lead">
-            Para plantear una auditoría técnica en planta, asesoría estratégica en ciberseguridad industrial (NIS2) o proyectos de ingeniería de sistemas a bajo nivel, conversemos de forma directa y confidencial.
-          </p>
-          <div class="contact-details">
-            <a href="mailto:contact@mysthrala.com" class="button button-contact">contact@mysthrala.com</a>
-            <a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer" class="contact-link">
-              GitHub: tears-mysthrala ↗
-            </a>
-          </div>
-          <p class="contact-languages">
-            Atención disponible en castellano, euskara o inglés.
-          </p>
+      <div class="contact-card">
+        <p class="section-index">Contacto directo</p>
+        <h2>Iniciemos una conversación</h2>
+        <p class="contact-lead">
+          Para plantear una auditoría técnica en planta, asesoría estratégica en ciberseguridad industrial (NIS2) o proyectos de ingeniería de sistemas a bajo nivel, conversemos de forma directa y confidencial.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:contact@mysthrala.com" class="button button-contact">contact@mysthrala.com</a>
+          <a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer" class="contact-link">
+            GitHub (tears-mysthrala) ↗
+          </a>
         </div>
+        <p class="contact-languages">
+          Atención disponible en castellano, euskara o inglés.
+        </p>
       </div>
     </section>
   </main>
