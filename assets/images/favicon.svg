@@ -1,29 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <defs>
-    <!-- Kurogane & Raijin gradients -->
-    <linearGradient id="iron-grad" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2a2c35"/>
-      <stop offset="100%" stop-color="#121316"/>
-    </linearGradient>
-    <linearGradient id="akkoro-grad" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#e04848"/>
-      <stop offset="100%" stop-color="#991b1b"/>
-    </linearGradient>
-    <linearGradient id="raijin-gold" x1="20" y1="10" x2="44" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f0af4d"/>
-      <stop offset="100%" stop-color="#b45309"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Kurogane Outer Hexagonal Shield (Forged Iron) -->
-  <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="url(#iron-grad)" stroke="#3f4553" stroke-width="2.5" stroke-linejoin="round"/>
-
-  <!-- Akkorokamui Central Emblem (Vermilion Sigil / Heart) -->
-  <path d="M32 16L46 25V39L32 48L18 39V25L32 16Z" fill="#181a20" stroke="url(#akkoro-grad)" stroke-width="2.5" stroke-linejoin="round"/>
-
-  <!-- Raijin Lightning / Taiko Core (Gold Bolt) -->
-  <path d="M34 22L26 33H33L30 42L40 30H32L35 22H34Z" fill="url(#raijin-gold)"/>
-
-  <!-- Small Benten Silk Dot (Ivory Pearl) -->
-  <circle cx="32" cy="11" r="2" fill="#f5f4ef"/>
+  <!-- Clean hexagonal mark in ink and copper -->
+  <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="#ecebea" stroke="#202227" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 16L46 25V39L32 48L18 39V25L32 16Z" fill="#f6f5f3" stroke="#705886" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M34 22L26 33H33L30 42L40 30H32L35 22H34Z" fill="#a15538"/>
+  <circle cx="32" cy="11" r="2" fill="#202227"/>
 </svg>

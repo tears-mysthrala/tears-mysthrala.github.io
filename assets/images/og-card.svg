@@ -1,66 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Kurogane Background -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#14151a"/>
-      <stop offset="50%" stop-color="#0f1013"/>
-      <stop offset="100%" stop-color="#090a0c"/>
-    </linearGradient>
-
-    <!-- Akkorokamui Crimson & Raijin Gold -->
-    <linearGradient id="akkoro-raijin" x1="100" y1="100" x2="600" y2="400" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#e04848"/>
-      <stop offset="50%" stop-color="#d99036"/>
-      <stop offset="100%" stop-color="#f5f4ef"/>
-    </linearGradient>
-
-    <radialGradient id="ember-glow" cx="950" cy="180" r="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#c43434" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
+    <style>
+      .title { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 58px; font-weight: 600; fill: #202227; letter-spacing: -2px; }
+      .lead { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 26px; fill: #60636a; }
+      .tag { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 16px; font-weight: 650; fill: #3d3049; letter-spacing: 2px; }
+      .mono { font-family: monospace; font-size: 20px; fill: #a15538; font-weight: 600; }
+    </style>
   </defs>
 
-  <!-- Background Canvas -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#ember-glow)"/>
+  <!-- Paper background -->
+  <rect width="1200" height="630" fill="#ecebea"/>
 
-  <!-- Forged Iron Frame (Kurogane) -->
-  <rect x="36" y="36" width="1128" height="558" rx="14" fill="none" stroke="#2d303b" stroke-width="1.5"/>
-  <rect x="42" y="42" width="1116" height="546" rx="10" fill="none" stroke="#1d1f26" stroke-width="1"/>
+  <!-- Border & Margins -->
+  <rect x="48" y="48" width="1104" height="534" fill="#f6f5f3" stroke="#c9c7c4" stroke-width="1.5"/>
 
-  <!-- Emblem -->
-  <g transform="translate(90, 85) scale(1.35)">
-    <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="#181a20" stroke="#3f4553" stroke-width="2" stroke-linejoin="round"/>
-    <path d="M32 16L46 25V39L32 48L18 39V25L32 16Z" fill="#121316" stroke="#c43434" stroke-width="2" stroke-linejoin="round"/>
-    <path d="M34 22L26 33H33L30 42L40 30H32L35 22H34Z" fill="#d99036"/>
-    <circle cx="32" cy="11" r="2" fill="#f5f4ef"/>
-  </g>
+  <!-- Top Context -->
+  <text x="96" y="120" class="tag">BAJO DEBA · EUSKADI / KALISTA</text>
 
-  <!-- Badge / Sigil -->
-  <rect x="195" y="98" width="310" height="34" rx="4" fill="#1c1e26" stroke="#c43434" stroke-width="1" opacity="0.85"/>
-  <text x="210" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e04848" letter-spacing="2">MYSTHRALA KUROGANE DEFENSE LABS</text>
-
-  <!-- Title (Benten Silk White) -->
-  <text x="90" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#f5f4ef" letter-spacing="-1.5">
-    Kalista — Tears Mysthrala
+  <!-- Title -->
+  <text x="96" y="240" class="title">Kalista — Tears Mysthrala</text>
+  <text x="96" y="310" font-family="'Aptos', 'Segoe UI Variable', sans-serif" font-size="34px" font-weight="520" fill="#a15538">
+    Fundadora &amp; Desarrolladora de Sistemas
   </text>
 
-  <!-- Subtitle (Raijin Gold & Akkorokamui Red) -->
-  <text x="90" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" fill="#d99036">
-    Empresaria · Consultora de Seguridad OT/ICS · Artesana de Sistemas
-  </text>
+  <!-- Lead -->
+  <text x="96" y="385" class="lead">Ciberseguridad industrial, criterio de negocio y defensa operativa.</text>
+  <text x="96" y="425" class="lead">Software local-first, análisis forense DFIR y resiliencia en planta.</text>
 
-  <!-- Description -->
-  <text x="90" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#cfcbbe" line-height="1.5">
-    Defensa técnica, soberanía operativa y resiliencia para el tejido industrial.
-  </text>
-  <text x="90" y="415" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#8a867b">
-    Pragmatismo de planta, rigor forense y desarrollo de software local-first.
-  </text>
+  <!-- Rule -->
+  <line x1="96" y1="480" x2="1104" y2="480" stroke="#c9c7c4" stroke-width="1"/>
 
   <!-- Footer Info -->
-  <line x1="90" y1="480" x2="1110" y2="480" stroke="#2d303b" stroke-width="1"/>
-  <text x="90" y="530" font-family="monospace" font-size="18" fill="#e04848">mysthrala.com</text>
-  <text x="360" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#8a867b">Kurogane · Akkorokamui · Benten · Raijin</text>
-  <text x="820" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cfcbbe">Castellano · Euskara · English</text>
+  <text x="96" y="530" class="mono">mysthrala.com</text>
+  <text x="420" y="530" font-family="'Aptos', sans-serif" font-size="18px" fill="#60636a">Rigor Demostrable · Local-First · Control Humano</text>
+  <text x="940" y="530" font-family="'Aptos', sans-serif" font-size="18px" fill="#202227">Castellano · Euskara · English</text>
 </svg>
