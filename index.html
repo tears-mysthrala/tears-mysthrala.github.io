@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0a0c10">
+  <meta name="theme-color" content="#0f1013">
   <title>Mysthrala Kurogane Defense Labs | Kalista (Tears Mysthrala)</title>
   
-  <meta name="description" content="Consultoría técnica independiente de ciberseguridad industrial (OT/ICS), respuesta a incidentes DFIR y sistemas resilientes. Fundada por Kalista (Tears Mysthrala).">
+  <meta name="description" content="Práctica independiente de defensa técnica y consultoría de seguridad industrial (OT/ICS). Fundada por Kalista (Tears Mysthrala). Kurogane, Akkorokamui, Benten y Raijin.">
   <meta name="author" content="Kalista (Tears Mysthrala)">
   <meta name="robots" content="index, follow">
 
@@ -20,7 +20,7 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Mysthrala Kurogane Defense Labs">
   <meta property="og:title" content="Mysthrala Kurogane Defense Labs | Ciberseguridad OT &amp; Sistemas">
-  <meta property="og:description" content="Defensa técnica, auditoría OT/ICS y respuesta a incidentes para pequeñas y medianas empresas industriales.">
+  <meta property="og:description" content="Defensa técnica, auditoría en planta industrial y sistemas resilientes para pequeñas y medianas empresas.">
   <meta property="og:url" content="https://mysthrala.com/">
   <meta property="og:image" content="https://mysthrala.com/assets/images/og-card.svg">
 
@@ -34,10 +34,11 @@
   <header class="site-header">
     <div class="container nav-container">
       <a href="#inicio" class="brand-link" aria-label="Mysthrala - Inicio">
-        <svg class="brand-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-          <polyline points="2 17 12 22 22 17"/>
-          <polyline points="2 12 12 17 22 12"/>
+        <svg class="brand-crest" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="#181a20" stroke="#3b404e" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M32 16L46 25V39L32 48L18 39V25L32 16Z" fill="#121316" stroke="#c43434" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M34 22L26 33H33L30 42L40 30H32L35 22H34Z" fill="#d99036"/>
+          <circle cx="32" cy="11" r="2" fill="#f5f4ef"/>
         </svg>
         <span>Mysthrala</span>
         <span class="brand-tag">MKDL</span>
@@ -45,16 +46,17 @@
 
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="#enfoque" class="nav-link">Enfoque</a></li>
+          <li><a href="#pilares" class="nav-link">Pilares</a></li>
+          <li><a href="#enfoque" class="nav-link">El Entorno</a></li>
           <li><a href="#servicios" class="nav-link">Servicios OT</a></li>
-          <li><a href="#tesis" class="nav-link">Tesis Técnica</a></li>
-          <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+          <li><a href="#artesania" class="nav-link">Artesanía &amp; Código</a></li>
+          <li><a href="#metodologia" class="nav-link">Forma de Trabajo</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contacto" class="btn btn-secondary">Iniciar Consulta</a>
+        <a href="#contacto" class="btn btn-secondary">Consulta Directa</a>
         <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
           ☰
         </button>
@@ -68,21 +70,21 @@
       <div class="container">
         <div class="hero-content">
           <div class="badge-status">
-            <span class="status-indicator" aria-hidden="true"></span>
-            <span>Práctica independiente · Consultoría selecta para industria</span>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Práctica independiente · Consultoría selecta para entornos industriales</span>
           </div>
 
           <h1 class="hero-title">
-            Defensa técnica y ciberseguridad para la industria real.
+            Defensa técnica y soberanía operativa para la <em>industria real.</em>
           </h1>
 
           <p class="hero-subtitle">
-            <strong>Mysthrala Kurogane Defense Labs (MKDL)</strong> es la firma técnica independiente de <strong>Kalista (Tears Mysthrala)</strong>. Protejo plantas de producción, redes operacionales (OT/ICS) y sistemas críticos frente a incidentes y exigencias regulatorias, sin vender software inflado ni comprometer la continuidad de la fábrica.
+            <strong>Mysthrala Kurogane Defense Labs (MKDL)</strong> es la firma técnica independiente de <strong>Kalista (Tears Mysthrala)</strong>. Protejo fábricas, talleres, procesos continuos y redes operacionales (OT/ICS) frente a amenazas e interrupciones, sin vender licencias infladas ni comprometer la continuidad de planta.
           </p>
 
           <div class="hero-actions">
             <a href="#contacto" class="btn btn-primary">
-              Solicitar Evaluación
+              Iniciar Conversación
             </a>
             <a href="#servicios" class="btn btn-secondary">
               Ver Áreas de Intervención
@@ -91,156 +93,208 @@
 
           <div class="hero-trust-bar">
             <div class="trust-item">
-              <h4>01 / Pragmatismo de Planta</h4>
-              <p>La producción manda. No aplicamos políticas de oficina que arriesguen paradas en líneas o perturben autómatas.</p>
+              <h4><span class="num">01 /</span> Pragmatismo de Planta</h4>
+              <p>La producción física no se detiene. No aplicamos políticas de oficina que arriesguen paradas en líneas o perturben autómatas.</p>
             </div>
             <div class="trust-item">
-              <h4>02 / Trato Directo de Ingeniería</h4>
-              <p>Sin comerciales ni intermediarios. Hablas con la especialista que inspecciona el tráfico de red, los binarios y la memoria.</p>
+              <h4><span class="num">02 /</span> Interlocución de Ingeniería</h4>
+              <p>Trato directo de técnica a técnica. Sin comerciales ni capas intermedias: hablas con quien audita el tráfico y examina la memoria.</p>
             </div>
             <div class="trust-item">
-              <h4>03 / Soberanía Local-First</h4>
-              <p>Herramientas y procesos que funcionan en local. Tus evidencias, topología y datos nunca se envían a nubes opacas.</p>
+              <h4><span class="num">03 /</span> Soberanía Local-First</h4>
+              <p>Tus evidencias, topologías y configuraciones permanecen en tu control estricto. Cero telemetría enviada a nubes de terceros.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Industry Problem vs Solution -->
-    <section id="enfoque" class="section">
+    <!-- Mythos & Identity Pillars -->
+    <section id="pilares" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">// EL CONTEXTO INDUSTRIAL</span>
-          <h2 class="section-title">La brecha de seguridad en la pequeña y mediana industria</h2>
+          <span class="section-label">// IDENTIDAD &amp; FUNDAMENTOS</span>
+          <h2 class="section-title">Los cuatro principios de nuestra defensa</h2>
           <p class="section-desc">
-            Las fábricas e instalaciones críticas se enfrentan a un dilema: los paquetes corporativos tradicionales son inviables para sus procesos y las normativas no admiten excusas.
+            Nuestra forma de entender la seguridad de las operaciones industriales no proviene de recetas corporativas estándar, sino de cuatro fuerzas coordinadas.
           </p>
         </div>
 
-        <div class="problem-card">
-          <div class="problem-col challenge">
-            <h3>El Enfoque Tradicional</h3>
-            <ul class="problem-list">
-              <li>Consultoras que venden licencias millonarias e instalan agentes que saturan o bloquean PLCs y SCADAs sensibles.</li>
-              <li>Informes teóricos de 300 páginas con lenguaje burocrático que los responsables de planta no pueden aplicar.</li>
-              <li>Políticas pensadas para entornos IT de oficina que exigen paradas de mantenimiento inviables en producción continua.</li>
-              <li>Dependencia forzada de nubes externas y suscripciones anuales recurrentes sin transferencia de conocimiento.</li>
+        <div class="mythos-grid">
+          <!-- Kurogane -->
+          <article class="mythos-card kurogane">
+            <span class="mythos-kanji">黒鉄</span>
+            <h3 class="mythos-title">Kurogane</h3>
+            <span class="mythos-domain">La Forja &amp; El Hierro</span>
+            <p class="mythos-desc">
+              El respeto a la materia, la estructura física de la fábrica y la solidez de los sistemas. Un bastionado pesado, paciente y tenaz que soporta la fricción del entorno industrial.
+            </p>
+          </article>
+
+          <!-- Akkorokamui -->
+          <article class="mythos-card akkorokamui">
+            <span class="mythos-kanji">赤神</span>
+            <h3 class="mythos-title">Akkorokamui</h3>
+            <span class="mythos-domain">La Defensa Profunda</span>
+            <p class="mythos-desc">
+              El kami vermellón de las aguas profundas. Capacidad de vigilancia en la sombra, contención rápida de intrusiones y respuesta forense sin perturbar la corriente del proceso productivo.
+            </p>
+          </article>
+
+          <!-- Benten -->
+          <article class="mythos-card benten">
+            <span class="mythos-kanji">弁才天</span>
+            <h3 class="mythos-title">Benten</h3>
+            <span class="mythos-domain">La Claridad &amp; El Diálogo</span>
+            <p class="mythos-desc">
+              La palabra justa, la sabiduría y la pedagogía técnica. Traducir riesgos tecnológicos complejos a impacto de negocio para que directores y operarios compartan una misma visión sin alarmismos.
+            </p>
+          </article>
+
+          <!-- Raijin -->
+          <article class="mythos-card raijin">
+            <span class="mythos-kanji">雷神</span>
+            <h3 class="mythos-title">Raijin</h3>
+            <span class="mythos-domain">El Rayo &amp; El Tiempo Real</span>
+            <p class="mythos-desc">
+              La energía que impulsa autómatas, actuadores y redes concurrentes. Auditoría implacable y diseño de software tolerante a fallos que reacciona con la precisión del trueno ante anomalías.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Context & Reality -->
+    <section id="enfoque" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// LA REALIDAD INDUSTRIAL</span>
+          <h2 class="section-title">El choque entre el software de oficina y la planta de producción</h2>
+          <p class="section-desc">
+            Las pequeñas y medianas empresas industriales están atrapadas entre regulaciones cada vez más exigentes (NIS2) y proveedores que no entienden la cadencia de una fábrica.
+          </p>
+        </div>
+
+        <div class="contrast-box">
+          <div class="contrast-col tradition">
+            <h3>La Práctica Corporativa Común</h3>
+            <ul class="contrast-list">
+              <li>Instalar agentes intrusivos de monitorización que saturan las interfaces de comunicación de autómatas programables antiguos.</li>
+              <li>Entregar auditorías voluminosas con 200 vulnerabilidades teóricas que ningún ingeniero de mantenimiento puede priorizar.</li>
+              <li>Exigir reinicios periódicos y ventanas de parcheo incompatibles con el trabajo a turnos o la producción continua.</li>
+              <li>Atar a la empresa a licencias recurrentes y nubes externas donde se expone la topología interna de la fábrica.</li>
             </ul>
           </div>
 
-          <div class="problem-col solution">
-            <h3>El Modelo MKDL</h3>
-            <ul class="problem-list">
-              <li>Intervenciones quirúrgicas no intrusivas: mapeo de red pasivo y segmentación sin riesgo operativo.</li>
-              <li>Planes de remediación priorizados por impacto real de negocio y factibilidad técnica inmediata.</li>
-              <li>Comprensión profunda de los protocolos industriales (Modbus, Profinet, Ethernet/IP) y del ciclo de fabricación.</li>
-              <li>Capacitación del personal interno de mantenimiento y sistemas para que mantengan el control soberano.</li>
+          <div class="contrast-col mkdl">
+            <h3>La Intervención MKDL</h3>
+            <ul class="contrast-list">
+              <li>Inspección pasiva de tráfico y aislamiento estricto de redes según el modelo Purdue sin introducir latencia.</li>
+              <li>Planes de acción quirúrgicos clasificados por riesgo tangible de parada de máquina o daño a activos críticos.</li>
+              <li>Respeto estricto a las ventanas operativas y protocolos propios del sector (Modbus, Profinet, Ethernet/IP).</li>
+              <li>Transferencia de criterio al equipo de mantenimiento propio para preservar la autonomía soberana del cliente.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services / MKDL Offerings -->
+    <!-- Services / MKDL Capabilities -->
     <section id="servicios" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">// CAPACIDADES Y SERVICIOS</span>
-          <h2 class="section-title">Intervenciones especializadas para entornos de producción</h2>
+          <span class="section-label">// SERVICIOS &amp; CAPACIDADES</span>
+          <h2 class="section-title">Servicios estructurados para la continuidad operativa</h2>
           <p class="section-desc">
-            Servicios estructurados para diagnosticar riesgos tangibles, mitigar vectores de intrusión y responder con rapidez ante emergencias operativas.
+            Intervenciones especializadas para evaluar el estado real de la red, cerrar vías de acceso no controladas y responder ante emergencias.
           </p>
         </div>
 
         <div class="services-grid">
           <!-- Service 1 -->
           <article class="service-card">
-            <span class="service-code">01 / AUDITORÍA EN PLANTA</span>
-            <h3>Cartografía &amp; Hardening de Redes OT / ICS</h3>
+            <span class="service-num">01 / CARTOGRAFÍA &amp; HARDENING</span>
+            <h3>Auditoría de Redes OT / ICS &amp; Purdue</h3>
             <p>
-              Auditoría de arquitectura según el modelo Purdue. Identificación de activos no inventariados, dispositivos con firmware vulnerable, enlaces fantasma entre IT y OT y segmentación estricta de celdas productivas.
+              Mapeo exhaustivo de activos en planta, identificación de equipos puente no inventariados, segmentación entre red corporativa y de control, y eliminación de conexiones remotas directas no supervisadas.
             </p>
-            <ul class="service-deliverables">
-              <li><strong>Entregable:</strong> Mapa de topología real verificado en planta.</li>
-              <li><strong>Resultado:</strong> Aislamiento de zonas críticas y eliminación de accesos no autorizados.</li>
+            <ul class="service-meta">
+              <li><strong>Entregable:</strong> Topología real contrastada y matriz de flujos autorizados.</li>
+              <li><strong>Objetivo:</strong> Contención estricta para que un incidente en oficina nunca alcance a los autómatas.</li>
             </ul>
           </article>
 
           <!-- Service 2 -->
           <article class="service-card">
-            <span class="service-code">02 / RESPUESTA FORENSE</span>
-            <h3>Respuesta a Incidentes &amp; Triage de Memoria (DFIR)</h3>
+            <span class="service-num">02 / RESPUESTA A INCIDENTES</span>
+            <h3>Triage Forense &amp; Memoria Volátil (DFIR)</h3>
             <p>
-              Intervención rápida ante sospecha de compromiso, ransomware o anomalías en sistemas de control. Adquisición forense de memoria RAM y evidencias digitales preservando la cadena de custodia y la continuidad de línea.
+              Actuación rápida ante intrusiones, comportamientos anómalos o intentos de extorsión. Adquisición de memoria RAM y evidencias digitales preservando la integridad del proceso y la cadena de custodia.
             </p>
-            <ul class="service-deliverables">
-              <li><strong>Entregable:</strong> Dictamen forense con causa raíz y vector de entrada.</li>
-              <li><strong>Resultado:</strong> Erradicación limpia de la amenaza y restauración segura.</li>
+            <ul class="service-meta">
+              <li><strong>Entregable:</strong> Dictamen forense con vector de compromiso y alcance de intrusión.</li>
+              <li><strong>Objetivo:</strong> Erradicación segura sin destruir evidencias ni parar líneas innecesariamente.</li>
             </ul>
           </article>
 
           <!-- Service 3 -->
           <article class="service-card">
-            <span class="service-code">03 / GOBERNANZA TÉCNICA</span>
-            <h3>Cumplimiento Pragmático NIS2 &amp; IEC 62443</h3>
+            <span class="service-num">03 / GOBERNANZA TÉCNICA</span>
+            <h3>Adecuación Pragmática a NIS2 &amp; IEC 62443</h3>
             <p>
-              Adaptación técnica a las exigencias legales europeas para entidades esenciales e importantes. Diseñamos políticas de seguridad técnica, gestión de proveedores y control de accesos que satisfacen la normativa sin asfixiar la agilidad.
+              Alineación de la organización con la directiva europea NIS2 y estándares industriales. Traducimos obligaciones normativas a medidas de ingeniería reales y defendibles ante inspectores, sin parálisis burocrática.
             </p>
-            <ul class="service-deliverables">
-              <li><strong>Entregable:</strong> Matriz de adecuación técnica y plan de remediación.</li>
-              <li><strong>Resultado:</strong> Cumplimiento demostrable ante auditorías oficiales.</li>
+            <ul class="service-meta">
+              <li><strong>Entregable:</strong> Plan de remediación priorizado y documentación técnica auditable.</li>
+              <li><strong>Objetivo:</strong> Cumplimiento normativo justificado por seguridad efectiva, no de papel.</li>
             </ul>
           </article>
 
           <!-- Service 4 -->
           <article class="service-card">
-            <span class="service-code">04 / BASTIONADO DE SISTEMAS</span>
-            <h3>Hardening de Estaciones de Control &amp; Servidores</h3>
+            <span class="service-num">04 / BASTIONADO CRÍTICO</span>
+            <h3>Hardening de Servidores SCADA &amp; Estaciones HMI</h3>
             <p>
-              Blindaje de HMIs, servidores de ingeniería y estaciones SCADA en Linux y Windows. Implementación de configuraciones reproducibles, políticas de privilegios mínimos estrictas y desactivación de servicios innecesarios.
+              Blindaje de puestos operativos en entornos Linux y Windows. Políticas de privilegios mínimos, bloqueo de ejecución no autorizada, reducción de telemetría y configuraciones reproducibles resistentes al paso del tiempo.
             </p>
-            <ul class="service-deliverables">
-              <li><strong>Entregable:</strong> Plantillas de configuración y scripts de verificación.</li>
-              <li><strong>Resultado:</strong> Reducción drástica de la superficie de ataque en puestos clave.</li>
+            <ul class="service-meta">
+              <li><strong>Entregable:</strong> Guías de configuración endurecidas y scripts de validación local.</li>
+              <li><strong>Objetivo:</strong> Puestos de ingeniería inmunes a vectores comunes de movimiento lateral.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Technical Thesis / Dev Perspective -->
-    <section id="tesis" class="section">
+    <!-- Builder Craft & Dev Perspective -->
+    <section id="artesania" class="section">
       <div class="container">
-        <div class="thesis-box">
-          <span class="section-label">// LA PERSPECTIVA BUILDER</span>
-          <h2 class="section-title">Por qué la ingeniería de bajo nivel es insustituible</h2>
+        <div class="thesis-container">
+          <span class="section-label">// LA ARTESANÍA DEL BUILDER</span>
+          <h2 class="section-title">Por qué la práctica de ingeniería marca la diferencia</h2>
           <p class="section-desc">
-            No es posible liderar una estrategia de ciberdefensa creíble sin saber cómo interactúan los procesos con el kernel, la memoria volátil y los sockets de red. Mi faceta de desarrolladora e investigadora fundamenta cada decisión de consultoría.
+            Quien solo vende consultoría repite manuales de terceros. Quien construye herramientas, analiza la memoria byte a byte y diseña arquitecturas concurrentes entiende con precisión quirúrgica dónde residen los fallos y cómo blindarlos.
           </p>
 
           <div class="thesis-grid">
             <div class="thesis-item">
-              <span class="thesis-num">01 / Rigor Demostrable</span>
-              <h4>"Demonstrable over Claims"</h4>
+              <h4 style="color: var(--raijin-spark);">"Demonstrable over Claims"</h4>
               <p>
-                No recomiendo medidas que no puedan reproducirse y validarse experimentalmente en laboratorio. Rechazo el alarmismo comercial y baso mis recomendaciones en telemetría de bajo nivel y evidencia tangible.
+                Rigor experimental absoluto. No recomiendo protecciones teóricas que no hayan sido verificadas en laboratorio. La seguridad industrial no admite promesas publicitarias.
               </p>
             </div>
 
             <div class="thesis-item">
-              <span class="thesis-num">02 / Forense de Memoria</span>
-              <h4>Análisis Forense Local-First</h4>
+              <h4 style="color: var(--akkoro-bright);">Forense de Memoria &amp; Local-First</h4>
               <p>
-                Los atacantes sofisticados operan en memoria para evitar el disco. Desarrollo herramientas y metodologías propias (como el proyecto formativo <em>Oroitz</em> sobre Volatility 3) que mantienen al analista humano al mando en todo momento.
+                Los adversarios cualificados no tocan disco; residen en la memoria. El desarrollo de proyectos de análisis forense (como la iniciativa docente <em>Oroitz</em> sobre Volatility 3) garantiza una investigación profunda y bajo control humano directo.
               </p>
             </div>
 
             <div class="thesis-item">
-              <span class="thesis-num">03 / Tolerancia a Fallos</span>
-              <h4>Arquitecturas Resilientes</h4>
+              <h4 style="color: var(--benten-silk);">Arquitecturas Resilientes (OTP)</h4>
               <p>
-                Experiencia en sistemas distribuidos y concurrentes con el modelo de actores (Elixir/OTP). La resiliencia no se añade al final: debe estar inscrita en el diseño para que el sistema tolere fallos parciales sin colapsar.
+                Experiencia en el modelo de actores y árboles de supervisión (Elixir/OTP). Los sistemas industriales y de alta disponibilidad deben estar concebidos para aislar el error y auto-recuperarse sin caída general.
               </p>
             </div>
           </div>
@@ -248,81 +302,81 @@
       </div>
     </section>
 
-    <!-- Engagement Methodology -->
+    <!-- Methodology -->
     <section id="metodologia" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">// FORMA DE TRABAJO</span>
-          <h2 class="section-title">Un proceso estructurado, transparente y confidencial</h2>
+          <span class="section-label">// METODOLOGÍA DE INTERVENCIÓN</span>
+          <h2 class="section-title">Un proceso sobrio, ordenado y bajo estricta confidencialidad</h2>
           <p class="section-desc">
-            Cada intervención se adapta a la criticidad y madurez tecnológica de la organización.
+            Cada trabajo se planifica conjuntamente con los responsables de la instalación para asegurar cero impacto en las operaciones diarias.
           </p>
         </div>
 
-        <div class="engagement-steps">
-          <div class="step-card">
-            <span class="step-num">FASE 01</span>
-            <h4>Acuerdo &amp; Alcance</h4>
-            <p>Firma de acuerdo de confidencialidad estricto (NDA), definición de límites de planta y ventanas operativas autorizadas.</p>
+        <div class="steps-grid">
+          <div class="step-box">
+            <span class="step-label">PASO 01</span>
+            <h4>NDA &amp; Alcance</h4>
+            <p>Firma de acuerdo de confidencialidad recíproco y delimitación estricta de las líneas y equipos autorizados.</p>
           </div>
-          <div class="step-card">
-            <span class="step-num">FASE 02</span>
-            <h4>Inspección Técnica</h4>
-            <p>Captura pasiva de tráfico, verificación de configuraciones de controladores y análisis forense de puntos neurálgicos.</p>
+          <div class="step-box">
+            <span class="step-label">PASO 02</span>
+            <h4>Inspección Pasiva</h4>
+            <p>Análisis de configuración, revisión de topología y captura no intrusiva de tráfico en planta.</p>
           </div>
-          <div class="step-card">
-            <span class="step-num">FASE 03</span>
-            <h4>Dictamen Ejecutivo</h4>
-            <p>Informe claro para dirección con riesgo económico real y guía técnica paso a paso para el personal de planta.</p>
+          <div class="step-box">
+            <span class="step-label">PASO 03</span>
+            <h4>Dictamen Técnico</h4>
+            <p>Informe claro para gerencia con impacto financiero real y guía técnica inmediata para el personal de planta.</p>
           </div>
-          <div class="step-card">
-            <span class="step-num">FASE 04</span>
-            <h4>Acompañamiento</h4>
-            <p>Soporte en la implantación de medidas correctivas y validación final de que las defensas operan correctamente.</p>
+          <div class="step-box">
+            <span class="step-label">PASO 04</span>
+            <h4>Remediación Guiada</h4>
+            <p>Acompañamiento en el despliegue de medidas correctoras y comprobación práctica de la resistencia del bastionado.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Direct Inquiry -->
+    <!-- Contact & Consultation -->
     <section id="contacto" class="contact-section">
       <div class="container">
         <div class="contact-card">
           <div class="contact-info">
             <span class="section-label">// CONTACTO DIRECTO</span>
-            <h2>Iniciemos una conversación confidencial</h2>
+            <h2>Iniciemos una conversación técnica</h2>
             <p>
-              Si necesitas auditar la seguridad de tu planta industrial, responder a una anomalía o preparar a tu organización para las obligaciones de NIS2, podemos coordinar una reunión técnica inicial.
+              Si necesitas auditar la red de tu planta, responder a un incidente operativo o diseñar una arquitectura de seguridad adaptada a NIS2, conversemos con total discreción.
             </p>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
-              Atención directa en <strong>castellano</strong>, <strong>euskara</strong> e <strong>inglés</strong>. Disponibilidad sujeta a capacidad operativa para garantizar máxima dedicación a cada cliente.
+            <p style="font-size: 0.92rem; color: var(--benten-stone);">
+              Atención directa en <strong>castellano</strong>, <strong>euskara</strong> e <strong>inglés</strong>. Trato directo sin intermediarios comerciales.
             </p>
           </div>
 
-          <div class="contact-actions">
-            <!-- Channel: Email -->
-            <div class="contact-box">
-              <div class="contact-meta">
-                <span class="contact-label">Correo Profesional</span>
-                <span class="contact-val">contact@mysthrala.com</span>
+          <div class="contact-channels">
+            <!-- Channel: Professional Email -->
+            <div class="channel-box">
+              <div class="channel-meta">
+                <span class="channel-tag">Correo Profesional</span>
+                <span class="channel-val">contact@mysthrala.com</span>
               </div>
               <button class="copy-btn" data-copy="contact@mysthrala.com" aria-label="Copiar correo electrónico">
                 Copiar
               </button>
             </div>
 
-            <!-- Direct Mail Link -->
+            <!-- Mail Button -->
             <a href="mailto:contact@mysthrala.com" class="btn btn-primary" style="width: 100%;">
-              Enviar mensaje directo →
+              Enviar mensaje confidencial →
             </a>
 
-            <!-- Public Code Reference -->
-            <div class="contact-box" style="margin-top: 4px;">
-              <div class="contact-meta">
-                <span class="contact-label">Investigación &amp; Código Abierto</span>
-                <span class="contact-val">github.com/tears-mysthrala</span>
+            <!-- Public Code & Research Link -->
+            <div class="channel-box">
+              <div class="channel-meta">
+                <span class="channel-tag">Código Público &amp; Herramientas</span>
+                <span class="channel-val">github.com/tears-mysthrala</span>
               </div>
-              <a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">
+              <a href="https://github.com/tears-mysthrala" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">
                 GitHub
               </a>
             </div>
@@ -339,16 +393,16 @@
         <p>
           &copy; <span id="current-year">2026</span> <strong>Kalista (Tears Mysthrala)</strong> · Mysthrala Kurogane Defense Labs (MKDL).
         </p>
-        <p style="font-size: 0.78rem; margin-top: 4px; color: var(--text-muted);">
-          Arquitectura estática local-first. 0 rastreadores, 0 cookies de terceros.
+        <p style="font-size: 0.78rem; margin-top: 4px; color: var(--benten-muted);">
+          Kurogane · Akkorokamui · Benten · Raijin. 0 rastreadores, 0 cookies de terceros.
         </p>
       </div>
 
       <ul class="footer-nav">
-        <li><a href="#enfoque">Enfoque</a></li>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#enfoque">El Entorno</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#tesis">Tesis</a></li>
-        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#artesania">Artesanía</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>

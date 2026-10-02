@@ -1,65 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
+    <!-- Kurogane Background -->
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#090d16"/>
-      <stop offset="50%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#060911"/>
+      <stop offset="0%" stop-color="#14151a"/>
+      <stop offset="50%" stop-color="#0f1013"/>
+      <stop offset="100%" stop-color="#090a0c"/>
     </linearGradient>
-    <linearGradient id="primary-grad" x1="100" y1="100" x2="800" y2="400" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+
+    <!-- Akkorokamui Crimson & Raijin Gold -->
+    <linearGradient id="akkoro-raijin" x1="100" y1="100" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e04848"/>
+      <stop offset="50%" stop-color="#d99036"/>
+      <stop offset="100%" stop-color="#f5f4ef"/>
     </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.4"/>
-    </pattern>
-    <radialGradient id="glow" cx="600" cy="200" r="500" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+
+    <radialGradient id="ember-glow" cx="950" cy="180" r="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c43434" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#ember-glow)"/>
 
-  <!-- Border Frame -->
-  <rect x="30" y="30" width="1140" height="570" rx="16" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.6"/>
+  <!-- Forged Iron Frame (Kurogane) -->
+  <rect x="36" y="36" width="1128" height="558" rx="14" fill="none" stroke="#2d303b" stroke-width="1.5"/>
+  <rect x="42" y="42" width="1116" height="546" rx="10" fill="none" stroke="#1d1f26" stroke-width="1"/>
 
-  <!-- Logo Mark -->
-  <g transform="translate(100, 100) scale(1.3)">
-    <polygon points="32,4 58,16 58,38 32,59 6,38 6,16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
-    <path d="M17 40V22L32 34L47 22V40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M25 40V30L32 35L39 30V40" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="32" cy="18" r="2.5" fill="#38bdf8"/>
+  <!-- Emblem -->
+  <g transform="translate(90, 85) scale(1.35)">
+    <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="#181a20" stroke="#3f4553" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M32 16L46 25V39L32 48L18 39V25L32 16Z" fill="#121316" stroke="#c43434" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M34 22L26 33H33L30 42L40 30H32L35 22H34Z" fill="#d99036"/>
+    <circle cx="32" cy="11" r="2" fill="#f5f4ef"/>
   </g>
 
-  <!-- Tag / Badge -->
-  <rect x="200" y="112" width="290" height="38" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
-  <text x="215" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#38bdf8" letter-spacing="1.5">MYSTHRALA KUROGANE DEFENSE LABS</text>
+  <!-- Badge / Sigil -->
+  <rect x="195" y="98" width="310" height="34" rx="4" fill="#1c1e26" stroke="#c43434" stroke-width="1" opacity="0.85"/>
+  <text x="210" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e04848" letter-spacing="2">MYSTHRALA KUROGANE DEFENSE LABS</text>
 
-  <!-- Title -->
-  <text x="100" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="#f8fafc" letter-spacing="-1">
+  <!-- Title (Benten Silk White) -->
+  <text x="90" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#f5f4ef" letter-spacing="-1.5">
     Kalista — Tears Mysthrala
   </text>
 
-  <!-- Subtitle -->
-  <text x="100" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="url(#primary-grad)">
-    Empresaria · Consultora OT / ICS · Systems &amp; Software Dev
+  <!-- Subtitle (Raijin Gold & Akkorokamui Red) -->
+  <text x="90" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" fill="#d99036">
+    Empresaria · Consultora de Seguridad OT/ICS · Artesana de Sistemas
   </text>
 
   <!-- Description -->
-  <text x="100" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#94a3b8" line-height="1.5">
-    Ciberseguridad en entornos industriales críticos, análisis forense DFIR,
+  <text x="90" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#cfcbbe" line-height="1.5">
+    Defensa técnica, soberanía operativa y resiliencia para el tejido industrial.
   </text>
-  <text x="100" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#94a3b8">
-    arquitecturas tolerantes a fallos y software auditable local-first.
+  <text x="90" y="415" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#8a867b">
+    Pragmatismo de planta, rigor forense y desarrollo de software local-first.
   </text>
 
   <!-- Footer Info -->
-  <line x1="100" y1="480" x2="1100" y2="480" stroke="#334155" stroke-width="1" opacity="0.6"/>
-  <text x="100" y="530" font-family="monospace" font-size="18" fill="#38bdf8">mysthrala.com</text>
-  <text x="350" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#64748b">github.com/tears-mysthrala</text>
-  <text x="750" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#64748b">Castellano · Euskara · English</text>
+  <line x1="90" y1="480" x2="1110" y2="480" stroke="#2d303b" stroke-width="1"/>
+  <text x="90" y="530" font-family="monospace" font-size="18" fill="#e04848">mysthrala.com</text>
+  <text x="360" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#8a867b">Kurogane · Akkorokamui · Benten · Raijin</text>
+  <text x="820" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cfcbbe">Castellano · Euskara · English</text>
 </svg>
