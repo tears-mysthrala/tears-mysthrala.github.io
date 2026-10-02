@@ -1,49 +1,67 @@
 /* ==========================================================================
    Kalista — Tears Mysthrala | Personal Landing Page
-   Aesthetic Foundation:
-   - Palette inspired by Kurogane (iron ink), Akkorokamui (vermilion),
-     Benten (silk & wisteria plum), and Raijin (thunder amber).
-   - Architectural craft & typographic rigor matching MKDL standards.
+   Aesthetic: Refined Japanese Organic Minimalism (Non-Brutalist)
+   Atmosphere:
+   - Benten: Silk paper, warm porcelain, fluid curves, wisteria accents
+   - Kurogane: Soft forged iron ink, refined charcoal typography
+   - Akkorokamui: Lacquered vermilion accents and warm vital highlights
+   - Raijin: Soft thunder amber and sunlit brass details
    ========================================================================== */
 
 :root {
   color-scheme: light;
 
-  /* Benten: Silk & Natural Paper Canvas */
-  --silk: #f6f5f0;
-  --raised: #fcfbf8;
-  --pure: #ffffff;
+  /* Surfaces & Canvas (Silk & Porcelain) */
+  --silk: #f8f7f3;
+  --silk-subtle: #f2f0ea;
+  --card-bg: #ffffff;
+  --card-hover: #fcfcfb;
 
-  /* Kurogane: Forged Iron & Cast Charcoal */
-  --iron: #191a1f;
-  --iron-soft: #2c2e37;
-  --iron-muted: #5e616c;
-  --iron-line: #d8d5cb;
-  --iron-line-soft: #e7e5dc;
+  /* Kurogane (Charcoal & Ink) */
+  --ink: #1e2026;
+  --ink-secondary: #4a4d5a;
+  --ink-muted: #787b89;
+  --border-delicate: rgba(30, 32, 40, 0.08);
+  --border-hover: rgba(30, 32, 40, 0.16);
 
-  /* Akkorokamui: Sacred Vermilion / Cinnabar */
-  --vermilion: #b92b27;
-  --vermilion-deep: #871c19;
-  --vermilion-soft: #f7ebea;
+  /* Akkorokamui (Lacquered Vermilion) */
+  --vermilion: #c53830;
+  --vermilion-hover: #d7433b;
+  --vermilion-soft: #fcf1f0;
+  --vermilion-border: rgba(197, 56, 48, 0.22);
 
-  /* Raijin: Thunder Amber / Drum Gold */
+  /* Raijin (Thunder Amber & Brass) */
   --amber: #be7d22;
-  --amber-soft: #faf2e6;
+  --amber-soft: #fcf6ec;
+  --amber-border: rgba(190, 125, 34, 0.25);
 
-  /* Benten Depth: Plum & Wisteria */
-  --plum: #382c42;
-  --plum-light: #584666;
-  --plum-wash: #eee8f3;
+  /* Benten (Wisteria & Celestial Plum) */
+  --wisteria: #6a567d;
+  --wisteria-soft: #f4eff8;
+  --wisteria-border: rgba(106, 86, 125, 0.2);
 
-  --max: 76rem;
-  --gutter: clamp(1.25rem, 4vw, 4rem);
-
+  /* Typography & Layout */
   --font-sans: "Aptos", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --max-width: 1140px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  /* Soft Ambient Shadows (Organic, non-brutalist) */
+  --shadow-subtle: 0 4px 20px -2px rgba(30, 32, 40, 0.04), 0 2px 6px -1px rgba(30, 32, 40, 0.02);
+  --shadow-hover: 0 12px 32px -4px rgba(30, 32, 40, 0.08), 0 4px 12px -2px rgba(30, 32, 40, 0.03);
+
+  --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-* {
+/* Reset & Base */
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -52,680 +70,743 @@ html {
 }
 
 body {
-  margin: 0;
   background-color: var(--silk);
-  color: var(--iron);
+  color: var(--ink);
   font-family: var(--font-sans);
-  line-height: 1.62;
+  line-height: 1.68;
   text-rendering: optimizeLegibility;
   letter-spacing: -0.01em;
+  min-height: 100vh;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
+  transition: all var(--transition);
 }
 
-img {
-  display: block;
-  max-width: 100%;
+h1, h2, h3, h4 {
+  color: var(--ink);
+  font-weight: 560;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
-h1, h2, h3, h4, p {
-  margin-top: 0;
+p {
+  color: var(--ink-secondary);
+  font-size: 1.04rem;
+  line-height: 1.72;
 }
 
-h1, h2, h3 {
-  font-weight: 520;
-  letter-spacing: -0.035em;
-  line-height: 1.04;
-  color: var(--iron);
-}
-
+/* Skip link */
 .skip-link {
   position: fixed;
-  left: 1rem;
+  left: 1.5rem;
   top: -5rem;
   z-index: 999;
-  padding: 0.75rem 1rem;
-  background: var(--iron);
+  padding: 0.6rem 1.2rem;
+  background: var(--ink);
   color: #fff;
-  text-decoration: none;
+  border-radius: var(--radius-sm);
   font-weight: 600;
+  transition: top 0.2s ease;
 }
-
 .skip-link:focus {
-  top: 1rem;
+  top: 1.5rem;
 }
 
-a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--vermilion);
-  outline-offset: 4px;
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 /* ==========================================================================
    Header & Navigation
    ========================================================================== */
 .site-header {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  min-height: 7.5rem;
-  margin: auto;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(248, 247, 243, 0.88);
+  border-bottom: 1px solid var(--border-delicate);
+  z-index: 100;
+  transition: border-color var(--transition);
+}
+
+.site-header .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  border-bottom: 1px solid var(--iron-line);
+  height: 80px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  text-decoration: none;
+  gap: 12px;
 }
 
 .brand-emblem {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--vermilion-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vermilion);
+  border: 1px solid var(--vermilion-border);
 }
 
-.brand-meta {
+.brand-text {
   display: flex;
   flex-direction: column;
 }
 
 .brand-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--iron);
-  line-height: 1.1;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.2;
 }
 
-.brand-title {
-  font-size: 0.8rem;
-  color: var(--iron-muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.brand-subtitle {
+  font-size: 0.76rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
 }
 
-nav {
+.nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 2.5vw, 2.5rem);
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
   font-size: 0.92rem;
+  color: var(--ink-secondary);
+  font-weight: 500;
+  position: relative;
+  padding: 4px 0;
 }
 
-nav a {
-  text-decoration: none;
-  transition: color 0.15s ease;
-  color: var(--iron-muted);
-}
-
-nav a:hover {
+.nav-link:hover {
   color: var(--vermilion);
 }
 
-.nav-contact {
-  border-bottom: 2px solid var(--vermilion);
-  padding: 0.4rem 0;
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-contact {
+  padding: 8px 18px;
+  font-size: 0.88rem;
   font-weight: 600;
-  color: var(--iron) !important;
+  border-radius: var(--radius-full);
+  background: var(--card-bg);
+  color: var(--ink);
+  border: 1px solid var(--border-delicate);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-contact:hover {
+  border-color: var(--vermilion-border);
+  color: var(--vermilion);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Buttons & Badges (Refined, Curved, Tactile)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--vermilion);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(197, 56, 48, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--vermilion-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 56, 48, 0.35);
+}
+
+.btn-secondary {
+  background: var(--card-bg);
+  color: var(--ink);
+  border-color: var(--border-delicate);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-secondary:hover {
+  background: var(--card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 550;
+}
+
+.badge-status {
+  background: var(--card-bg);
+  color: var(--ink-secondary);
+  border: 1px solid var(--border-delicate);
+  box-shadow: var(--shadow-subtle);
+}
+
+.pulse-point {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--vermilion);
 }
 
 /* ==========================================================================
    Hero Section
    ========================================================================== */
-.hero {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  min-height: calc(100vh - 7.5rem);
-  margin: auto;
-  padding: clamp(4rem, 9vh, 7.5rem) 0;
+.hero-section {
+  padding: 80px 0 70px;
+}
+
+.hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
-  gap: clamp(3rem, 5vw, 5.5rem);
+  grid-template-columns: minmax(0, 1.28fr) minmax(20rem, 0.72fr);
+  gap: clamp(3rem, 6vw, 5rem);
   align-items: center;
 }
 
-.context {
-  color: var(--plum);
-  font-size: 0.82rem;
-  font-weight: 650;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
+.hero-content {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 22px;
 }
 
-.context-point {
-  width: 6px;
-  height: 6px;
-  background: var(--vermilion);
-  border-radius: 50%;
-  display: inline-block;
+.hero-title {
+  font-size: clamp(2.8rem, 5.2vw, 4.2rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  font-weight: 600;
 }
 
-.hero h1 {
-  max-width: 14ch;
-  margin-bottom: 2rem;
-  font-size: clamp(3.2rem, 5.5vw, 5.2rem);
-}
-
-.hero h1 em {
+.hero-title em {
   font-style: normal;
   color: var(--vermilion);
 }
 
 .hero-lead {
-  max-width: 44rem;
-  color: var(--iron-muted);
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
-  line-height: 1.65;
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  color: var(--ink-secondary);
+  line-height: 1.68;
+  max-width: 580px;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 2.4rem;
+  gap: 16px;
+  margin-top: 8px;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.2rem;
-  padding: 0.8rem 1.6rem;
-  text-decoration: none;
-  font-weight: 650;
-  font-size: 0.95rem;
-  transition: all 0.15s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.button-vermilion {
-  background: var(--vermilion);
-  color: #ffffff;
-}
-
-.button-vermilion:hover {
-  background: var(--vermilion-deep);
-}
-
-.button-iron {
-  background: var(--iron);
-  color: #ffffff;
-}
-
-.button-iron:hover {
-  background: var(--plum);
-}
-
-.text-link {
-  text-underline-offset: 0.3em;
-  font-weight: 600;
-  color: var(--iron);
-}
-
-.text-link:hover {
-  color: var(--vermilion);
-}
-
-/* ==========================================================================
-   Personal Profile Record (Card / Expediente Personal)
-   ========================================================================== */
-.profile-record {
-  min-width: 0;
-  margin: 0;
-  align-self: center;
-  border-top: 4px solid var(--iron);
-  border-bottom: 1px solid var(--iron);
-  background: var(--raised);
-  padding: 1.5rem 0 0;
-  box-shadow: 1.25rem 1.25rem 0 rgba(25, 26, 31, 0.08);
-}
-
-.record-header {
+/* Personal Floating Card (Non-brutalist, elegant porcelain) */
+.hero-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-hover);
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0 1.5rem 1rem;
-  color: var(--iron-muted);
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-family: var(--font-mono);
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
 }
 
-.record-headline {
-  margin: 1rem 1.5rem 1.8rem;
-  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-  font-weight: 540;
-  letter-spacing: -0.035em;
-  line-height: 1.12;
-  color: var(--iron);
-}
-
-.record-table {
-  margin: 0;
-}
-
-.record-table div {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  border-top: 1px solid var(--iron-line-soft);
-}
-
-.record-table dt {
-  font-weight: 620;
-  font-size: 0.92rem;
-  color: var(--iron);
-}
-
-.record-table dd {
-  margin: 0;
-}
-
-.status-pill {
-  display: inline-block;
-  padding: 0.28rem 0.55rem;
+.card-label {
   font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.status-pill.founder {
-  background: var(--plum-wash);
-  border-left: 3px solid var(--plum);
-  color: var(--plum);
-}
-
-.status-pill.systems {
-  background: var(--vermilion-soft);
-  border-left: 3px solid var(--vermilion);
-  color: var(--vermilion);
-}
-
-.status-pill.neutral {
-  background: #e7e5dc;
-  border-left: 3px solid #6b6e79;
-  color: var(--iron);
-}
-
-.status-pill.ethos {
-  background: var(--amber-soft);
-  border-left: 3px solid var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 650;
   color: var(--amber);
 }
 
-.record-footer {
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  background: var(--iron);
-  color: #f6f5f0;
-  font-size: 0.84rem;
-  line-height: 1.5;
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.info-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-delicate);
+  font-size: 0.92rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  color: var(--ink-muted);
+}
+
+.info-val {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pill {
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pill-wisteria {
+  background: var(--wisteria-soft);
+  color: var(--wisteria);
+  border: 1px solid var(--wisteria-border);
+}
+
+.pill-amber {
+  background: var(--amber-soft);
+  color: var(--amber);
+  border: 1px solid var(--amber-border);
+}
+
+.card-quote {
+  padding: 14px 18px;
+  background: var(--silk);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+  border-left: 3px solid var(--vermilion);
 }
 
 /* ==========================================================================
-   Full Bleed Statement (Benten Plum Deep)
-   ========================================================================== */
-.statement {
-  background: var(--plum);
-  color: #fff;
-  padding: clamp(4rem, 8vw, 7.5rem) max(var(--gutter), calc((100vw - var(--max)) / 2));
-}
-
-.statement p {
-  max-width: 33ch;
-  margin-bottom: 0.6rem;
-  font-size: clamp(1.75rem, 3.8vw, 3.5rem);
-  letter-spacing: -0.035em;
-  line-height: 1.15;
-  font-weight: 520;
-}
-
-.statement p:last-child {
-  margin-left: auto;
-  color: #e4dceb;
-}
-
-/* ==========================================================================
-   Standard Section Grid & Heading
+   Section Shared
    ========================================================================== */
 .section {
-  padding: clamp(5rem, 9vw, 8.5rem) max(var(--gutter), calc((100vw - var(--max)) / 2));
+  padding: 90px 0;
 }
 
-.section-heading {
-  display: grid;
-  grid-template-columns: 0.55fr 1.45fr;
-  gap: 2rem;
-  margin-bottom: 4rem;
+.section-header {
+  margin-bottom: 48px;
+  max-width: 720px;
 }
 
-.section-index {
-  color: var(--amber);
-  font-size: 0.82rem;
+.section-tag {
+  font-size: 0.8rem;
   font-weight: 650;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+  display: inline-block;
 }
 
-.section-heading h2 {
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
-  max-width: 14ch;
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--ink-secondary);
 }
 
 /* ==========================================================================
-   Duality Grid: Empresaria & Dev (Raised Background)
+   Duality Section: Empresaria & Desarrolladora
    ========================================================================== */
-.duality-section {
+.duality-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 8vw, 7rem);
-  background: var(--raised);
+  gap: 32px;
 }
 
-.duality-col > p:last-child {
-  max-width: 36rem;
-  color: var(--iron-muted);
-  font-size: 1.08rem;
-  line-height: 1.65;
+.duality-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-lg);
+  padding: 44px 38px;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
-.duality-items {
-  margin: 2.5rem 0 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--iron-line);
+.duality-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
 }
 
-.duality-items li {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  gap: 1.25rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--iron-line);
+.duality-card.business {
+  border-top: 3px solid var(--wisteria);
 }
 
-.duality-items span {
+.duality-card.dev {
+  border-top: 3px solid var(--vermilion);
+}
+
+.duality-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+}
+
+.duality-card.business .duality-icon {
+  background: var(--wisteria-soft);
+  color: var(--wisteria);
+}
+
+.duality-card.dev .duality-icon {
+  background: var(--vermilion-soft);
   color: var(--vermilion);
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  font-weight: 600;
 }
 
-.duality-items.dev span {
-  color: var(--amber);
+.duality-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
 }
 
-.duality-items h4 {
-  margin-bottom: 0.35rem;
-  font-size: 1.22rem;
-  color: var(--iron);
-}
-
-.duality-items p {
-  margin-bottom: 0;
-  color: var(--iron-muted);
-  font-size: 0.96rem;
-}
-
-/* ==========================================================================
-   Facets List (Editorial Rows with Diamond Marker)
-   ========================================================================== */
-.facet-list {
-  border-top: 1px solid var(--iron-line);
-}
-
-.facet-list article {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(13rem, 0.48fr);
-  gap: clamp(2rem, 6vw, 7rem);
-  padding: 2.4rem 0;
-  border-bottom: 1px solid var(--iron-line);
-  align-items: start;
-}
-
-.facet-list h3 {
-  position: relative;
-  margin-bottom: 0.75rem;
-  padding-left: 2rem;
-  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
-}
-
-.facet-list h3::before {
-  position: absolute;
-  top: 0.52em;
-  left: 0.15rem;
-  width: 0.55rem;
-  height: 0.55rem;
-  background: var(--vermilion);
-  content: "";
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.facet-list.builder h3::before {
-  background: var(--amber);
-}
-
-.facet-list article div p {
-  max-width: 44rem;
-  margin-bottom: 0;
-  padding-left: 2rem;
-  color: var(--iron-muted);
-  font-size: 1.05rem;
+.duality-desc {
+  font-size: 1rem;
+  color: var(--ink-secondary);
   line-height: 1.65;
+  margin-bottom: 28px;
 }
 
-.facet-output {
-  margin: 0.45rem 0 0;
-  padding-left: 1rem;
-  border-left: 2px solid var(--vermilion);
-  color: var(--vermilion-deep);
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-.facet-list.builder .facet-output {
-  border-color: var(--amber);
-  color: var(--amber);
-}
-
-/* ==========================================================================
-   Principles: Kurogane Cast Slate Block
-   ========================================================================== */
-.principles {
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-  gap: clamp(3rem, 8vw, 8rem);
-  background: var(--iron);
-  color: #fff;
-}
-
-.principles h2 {
-  color: #fff;
-  font-size: clamp(2.4rem, 5vw, 4.4rem);
-}
-
-.principles .section-index {
-  color: var(--amber);
-}
-
-.principles-lead {
-  max-width: 38rem;
-  color: #c9c7cd;
-  font-size: 1.1rem;
-  line-height: 1.65;
-}
-
-.principles-list {
-  margin: 3rem 0 0;
-  padding: 0;
+.duality-points {
   list-style: none;
-  border-top: 1px solid #3c3e49;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
 }
 
-.principles-list li {
-  display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  padding: 1.4rem 0;
-  border-bottom: 1px solid #3c3e49;
-}
-
-.principles-list li span {
-  color: var(--amber);
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-}
-
-.principles-list h4 {
-  color: #fff;
-  font-size: 1.15rem;
-  margin-bottom: 0.35rem;
-}
-
-.principles-list p {
-  margin: 0;
-  color: #b0adb8;
+.duality-points li {
   font-size: 0.94rem;
+  color: var(--ink-secondary);
   line-height: 1.6;
+  position: relative;
+  padding-left: 24px;
+}
+
+.duality-card.business li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--wisteria);
+}
+
+.duality-card.dev li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--vermilion);
+}
+
+.duality-points strong {
+  color: var(--ink);
 }
 
 /* ==========================================================================
-   Contact Section (Akkorokamui Vermilion Bleed)
+   Practice & Offerings (Curved Cards)
    ========================================================================== */
-.contact {
-  background: var(--vermilion);
-  color: #fff;
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
-.contact > p {
-  font-size: 0.9rem;
+.practice-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  padding: 34px 30px;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.practice-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.practice-number {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--amber);
+  font-weight: 650;
+  margin-bottom: 14px;
+}
+
+.practice-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.practice-card p {
+  font-size: 0.96rem;
+  color: var(--ink-secondary);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.practice-deliverable {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-delicate);
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.practice-deliverable strong {
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Principles Section (Calm, Grounded, Organic)
+   ========================================================================== */
+.principles-section {
+  background: var(--silk-subtle);
+  border-radius: var(--radius-lg);
+  padding: 70px 48px;
+  margin: 20px 0;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  margin-top: 40px;
+}
+
+.principle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.principle-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--amber);
+  font-weight: 650;
+}
+
+.principle-item h4 {
+  font-size: 1.25rem;
+}
+
+.principle-item p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Contact Section (Warm, Welcoming, Fluid)
+   ========================================================================== */
+.contact-section {
+  padding: 90px 0 100px;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-lg);
+  padding: 60px 50px;
+  box-shadow: var(--shadow-hover);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.contact-info h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 16px;
+}
+
+.contact-info p {
+  font-size: 1.08rem;
+  max-width: 480px;
+}
+
+.contact-actions-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.channel-card {
+  background: var(--silk);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.channel-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--ink-muted);
   font-weight: 600;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
-.contact h2 {
-  max-width: 18ch;
-  color: #fff;
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
-  margin-bottom: 2rem;
-}
-
-.contact-lead {
-  max-width: 44rem;
-  font-size: 1.15rem;
-  color: #fcedec;
-  line-height: 1.65;
-}
-
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.button-white {
-  background: #ffffff;
-  color: var(--iron);
-}
-
-.button-white:hover {
-  background: var(--silk);
-}
-
-.contact-direct {
-  color: #ffffff;
-  font-weight: 600;
-  text-underline-offset: 0.3em;
+.channel-val {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.copy-button {
+  background: var(--card-bg);
+  border: 1px solid var(--border-delicate);
+  color: var(--ink);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.copy-button:hover {
+  border-color: var(--vermilion-border);
+  color: var(--vermilion);
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
-footer {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  margin: auto;
-  padding: 4rem 0 3.5rem;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3rem;
-  align-items: end;
-  border-top: 1px solid var(--iron-line);
+.site-footer {
+  border-top: 1px solid var(--border-delicate);
+  padding: 48px 0;
+  background: var(--silk);
 }
 
-.footer-info p:first-child {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-
-.footer-info p:last-child {
-  color: var(--iron-muted);
-  font-size: 0.88rem;
-  margin-bottom: 0;
-}
-
-.footer-links {
+.footer-inner {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 20px;
   font-size: 0.88rem;
-  justify-content: flex-end;
+  color: var(--ink-muted);
 }
 
-.footer-links a {
-  text-decoration: none;
-  color: var(--iron-muted);
-}
-
-.footer-links a:hover {
+.footer-inner a:hover {
   color: var(--vermilion);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
 }
 
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 900px) {
-  .hero {
+@media (max-width: 960px) {
+  .hero-grid {
     grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 4rem 0;
+    gap: 40px;
   }
-  .section-heading {
+  .duality-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
-  .facet-list article {
+  .practice-grid {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
   }
-  .duality-section {
+  .principles-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 28px;
   }
-  .principles {
+  .contact-card {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    padding: 40px 30px;
   }
-  footer {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
-  .footer-links {
-    justify-content: flex-start;
+  .principles-section {
+    padding: 44px 24px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
