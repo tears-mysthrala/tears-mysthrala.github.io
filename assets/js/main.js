@@ -1,16 +1,10 @@
 /**
- * Kalista — Tears Mysthrala
- * Zero-dependency, lightweight interactions
+ * Unai Kalista Urzainqui Pérez — Interacciones Ligeras
+ * Zero-dependency, accesible, local-first
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Dynamic Footer Year
-  const yearSpan = document.getElementById('current-year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  // 2. Active section link highlighting via IntersectionObserver
+  // 1. Resaltado sutil del enlace activo según el scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
@@ -20,16 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
           navLinks.forEach(link => {
-            if (link.getAttribute('href') === `#${id}`) {
-              link.style.color = 'var(--ink)';
-            } else if (!link.classList.contains('nav-contact')) {
-              link.style.color = '';
+            const href = link.getAttribute('href');
+            if (href === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
             }
           });
         }
       });
     }, {
-      rootMargin: '-20% 0px -70% 0px'
+      rootMargin: '-20% 0px -65% 0px'
     });
 
     sections.forEach(section => observer.observe(section));

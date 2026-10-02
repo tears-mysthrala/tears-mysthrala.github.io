@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" aria-hidden="true" role="img">
+  <defs>
+    <!-- Sky gradient: Pale winter light -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DEE7ED" />
+      <stop offset="60%" stop-color="#EBF1F4" />
+      <stop offset="100%" stop-color="#F5F3EE" />
+    </linearGradient>
+
+    <!-- Mountain gradient: Cold mist silhouette -->
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ADC0CA" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#C8D7DF" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Sea water gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8DA3AF" />
+      <stop offset="40%" stop-color="#7B93A0" />
+      <stop offset="100%" stop-color="#607682" />
+    </linearGradient>
+
+    <!-- Brick gradient: Red brick warmth -->
+    <linearGradient id="brickGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#883E2F" />
+      <stop offset="50%" stop-color="#984D3C" />
+      <stop offset="100%" stop-color="#7B372A" />
+    </linearGradient>
+
+    <!-- Secondary brick shadow -->
+    <linearGradient id="brickShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6B3025" />
+      <stop offset="100%" stop-color="#55241C" />
+    </linearGradient>
+
+    <!-- Amber window glow -->
+    <radialGradient id="windowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F2D18D" stop-opacity="1" />
+      <stop offset="35%" stop-color="#D6B276" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#D6B276" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#D6B276" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Snow surface gradient -->
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2EBEF" />
+    </linearGradient>
+
+    <!-- Water reflection glow -->
+    <linearGradient id="waterReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D6B276" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#984D3C" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#607682" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="420" fill="url(#skyGrad)" />
+
+  <!-- Mount Hakodate distant silhouette -->
+  <path d="M 0 320 Q 140 210, 290 195 T 520 250 T 800 310 L 800 420 L 0 420 Z" fill="url(#mountainGrad)" />
+
+  <!-- Distant mist layer -->
+  <path d="M 0 340 C 200 325, 450 350, 800 330 L 800 420 L 0 420 Z" fill="#D5E0E5" opacity="0.6" />
+
+  <!-- Harbor Water -->
+  <rect y="380" width="800" height="220" fill="url(#waterGrad)" />
+
+  <!-- Water reflection from warehouse & window light -->
+  <ellipse cx="440" cy="460" rx="140" ry="45" fill="url(#waterReflection)" />
+  <ellipse cx="430" cy="430" rx="40" ry="12" fill="#D6B276" opacity="0.45" />
+
+  <!-- Gentle water surface lines (Benten/Akkorokamui currents) -->
+  <g stroke="#A6BCC7" stroke-width="1.2" opacity="0.45" stroke-linecap="round">
+    <path d="M 40 410 Q 120 412, 200 410" />
+    <path d="M 160 425 Q 260 428, 360 425" />
+    <path d="M 480 415 Q 560 418, 660 415" />
+    <path d="M 520 440 Q 640 443, 740 440" />
+    <path d="M 80 460 Q 220 464, 340 460" />
+    <path d="M 400 480 Q 510 483, 620 480" />
+    <path d="M 220 515 Q 380 519, 540 515" />
+  </g>
+
+  <!-- Pier / Wharf Stone Wall -->
+  <polygon points="220,410 800,410 800,430 210,430" fill="#4A5B66" />
+  <polygon points="210,430 800,430 800,442 205,442" fill="#2E3A42" />
+
+  <!-- Warehouse 1 (Background brick building) -->
+  <polygon points="250,290 390,290 390,410 250,410" fill="#753529" />
+  <polygon points="240,290 320,230 400,290" fill="#612B21" />
+  <!-- Snow on background roof -->
+  <polygon points="236,290 320,226 404,290 395,294 320,234 245,294" fill="url(#snowGrad)" />
+
+  <!-- Warehouse 2 (Main red brick warehouse - Kanemori style) -->
+  <g>
+    <!-- Left shaded wall -->
+    <polygon points="360,250 430,190 430,410 360,410" fill="url(#brickShadow)" />
+    <!-- Front gable facade -->
+    <polygon points="430,190 590,190 590,410 430,410" fill="url(#brickGrad)" />
+    <!-- Triangular pediment -->
+    <polygon points="430,190 510,130 590,190" fill="url(#brickGrad)" />
+
+    <!-- Pitched Roof Snow Cover -->
+    <polygon points="420,192 510,124 600,192 590,198 510,134 430,198" fill="url(#snowGrad)" />
+    <polygon points="350,252 425,190 432,196 358,258" fill="#F0F4F6" />
+
+    <!-- Architectural details: Dark timber beams & stone trim -->
+    <line x1="430" y1="260" x2="590" y2="260" stroke="#48221A" stroke-width="2.5" />
+    <line x1="430" y1="340" x2="590" y2="340" stroke="#48221A" stroke-width="2.5" />
+
+    <!-- Loading Arch Doors (Kurogane matte steel/iron trim) -->
+    <rect x="480" y="340" width="60" height="70" rx="4" fill="#293740" />
+    <path d="M 480 340 Q 510 325, 540 340 Z" fill="#293740" />
+    <line x1="510" y1="330" x2="510" y2="410" stroke="#3F515C" stroke-width="1.5" />
+
+    <!-- The Warm Illuminated Window (The Hearth / Calidez humana) -->
+    <!-- Window halo glow -->
+    <circle cx="510" cy="225" r="48" fill="url(#windowGlow)" />
+    <!-- Window frame -->
+    <rect x="492" y="206" width="36" height="38" rx="2" fill="#20150F" />
+    <!-- Window panes (amber light) -->
+    <rect x="495" y="209" width="14" height="15" fill="#F7DC9E" />
+    <rect x="511" y="209" width="14" height="15" fill="#F0D08A" />
+    <rect x="495" y="226" width="14" height="15" fill="#E8C377" />
+    <rect x="511" y="226" width="14" height="15" fill="#F4D795" />
+    <!-- Soft light spill on brick sill -->
+    <polygon points="488,245 532,245 538,250 482,250" fill="#D6B276" opacity="0.6" />
+
+    <!-- Small upper vent window -->
+    <circle cx="510" cy="168" r="9" fill="#293740" />
+    <circle cx="510" cy="168" r="6" fill="#D6B276" opacity="0.85" />
+  </g>
+
+  <!-- Warehouse 3 (Right building wing) -->
+  <polygon points="590,270 710,270 710,410 590,410" fill="#883E2F" />
+  <polygon points="585,270 650,220 715,270" fill="#783427" />
+  <polygon points="580,270 650,216 720,270 712,274 650,222 588,274" fill="url(#snowGrad)" />
+  <!-- Small window right -->
+  <rect x="635" y="300" width="30" height="32" rx="2" fill="#241B18" />
+  <rect x="638" y="303" width="24" height="26" fill="#D6B276" opacity="0.7" />
+
+  <!-- Snow on the Quay & Ground -->
+  <polygon points="180,410 800,410 800,416 195,416" fill="url(#snowGrad)" />
+  
+  <!-- Subtle foreground snow bank with soft curve -->
+  <path d="M 0 540 Q 200 480, 420 530 T 800 500 L 800 600 L 0 600 Z" fill="#EBF2F6" opacity="0.9" />
+  <path d="M 0 570 Q 260 520, 520 570 T 800 550 L 800 600 L 0 600 Z" fill="#FFFFFF" />
+
+  <!-- Subtle dock bollard (iron mooring) -->
+  <path d="M 330 495 L 342 495 L 344 525 L 328 525 Z" fill="#293740" />
+  <ellipse cx="336" cy="495" rx="7" ry="2.5" fill="#4A5B66" />
+  <!-- Snow cap on bollard -->
+  <ellipse cx="336" cy="494" rx="6" ry="2" fill="#FFFFFF" />
+
+  <!-- Quiet winter atmosphere stamp: small red seal (Hanko) in corner -->
+  <rect x="740" y="540" width="24" height="24" rx="3" fill="#984D3C" />
+  <rect x="744" y="544" width="16" height="16" rx="2" fill="none" stroke="#FAF8F5" stroke-width="1.2" opacity="0.8" />
+</svg>

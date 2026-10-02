@@ -1,37 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <style>
-      .title { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 58px; font-weight: 600; fill: #202227; letter-spacing: -2px; }
-      .lead { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 26px; fill: #60636a; }
-      .tag { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 16px; font-weight: 650; fill: #3d3049; letter-spacing: 2px; }
-      .mono { font-family: monospace; font-size: 20px; fill: #a15538; font-weight: 600; }
+      .serif { font-family: 'Newsreader', 'Iowan Old Style', 'Baskerville', 'Georgia', serif; font-size: 56px; font-weight: 500; fill: #293740; letter-spacing: -1.5px; }
+      .lead { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 24px; fill: #52616A; line-height: 1.5; }
+      .name { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 18px; font-weight: 650; fill: #984D3C; letter-spacing: 2px; }
+      .role { font-family: 'Aptos', 'Segoe UI Variable', -apple-system, sans-serif; font-size: 26px; fill: #293740; font-weight: 550; }
+      .quote { font-family: 'Newsreader', 'Georgia', serif; font-style: italic; font-size: 22px; fill: #984D3C; }
     </style>
   </defs>
 
-  <!-- Paper background -->
-  <rect width="1200" height="630" fill="#ecebea"/>
+  <!-- Warm background canvas -->
+  <rect width="1200" height="630" fill="#F5F3EE"/>
 
-  <!-- Border & Margins -->
-  <rect x="48" y="48" width="1104" height="534" fill="#f6f5f3" stroke="#c9c7c4" stroke-width="1.5"/>
+  <!-- Subtle snowy surface card -->
+  <rect x="48" y="48" width="1104" height="534" rx="16" fill="#FFFFFF" stroke="#E2EBEF" stroke-width="1.5"/>
 
-  <!-- Top Context -->
-  <text x="96" y="120" class="tag">BAJO DEBA · EUSKADI / KALISTA</text>
+  <!-- Identity line -->
+  <text x="96" y="125" class="name">UNAI KALISTA URZAINQUI PÉREZ</text>
+  <text x="96" y="165" class="role">Desarrolladora y fundadora de MKDL</text>
 
-  <!-- Title -->
-  <text x="96" y="240" class="title">Kalista — Tears Mysthrala</text>
-  <text x="96" y="310" font-family="'Aptos', 'Segoe UI Variable', sans-serif" font-size="34px" font-weight="520" fill="#a15538">
-    Fundadora &amp; Desarrolladora de Sistemas
-  </text>
+  <!-- Headline -->
+  <text x="96" y="270" class="serif">Construir con ambición.</text>
+  <text x="96" y="340" class="serif" fill="#984D3C">Proteger con sentido humano.</text>
 
   <!-- Lead -->
-  <text x="96" y="385" class="lead">Ciberseguridad industrial, criterio de negocio y defensa operativa.</text>
-  <text x="96" y="425" class="lead">Software local-first, análisis forense DFIR y resiliencia en planta.</text>
+  <text x="96" y="420" class="lead">Desarrollo de tecnología y proyectos propios orientados a proteger</text>
+  <text x="96" y="458" class="lead">a pequeñas organizaciones y entornos industriales que quedan fuera del foco.</text>
 
   <!-- Rule -->
-  <line x1="96" y1="480" x2="1104" y2="480" stroke="#c9c7c4" stroke-width="1"/>
+  <line x1="96" y1="505" x2="1104" y2="505" stroke="#E8EFF2" stroke-width="1.5"/>
 
-  <!-- Footer Info -->
-  <text x="96" y="530" class="mono">mysthrala.com</text>
-  <text x="420" y="530" font-family="'Aptos', sans-serif" font-size="18px" fill="#60636a">Rigor Demostrable · Local-First · Control Humano</text>
-  <text x="940" y="530" font-family="'Aptos', sans-serif" font-size="18px" fill="#202227">Castellano · Euskara · English</text>
+  <!-- Footer text -->
+  <text x="96" y="545" class="quote">«El tamaño de una empresa no mide la importancia de lo que sostiene.»</text>
+  <text x="960" y="545" font-family="'Aptos', sans-serif" font-size="17px" fill="#52616A">mysthrala.com</text>
 </svg>

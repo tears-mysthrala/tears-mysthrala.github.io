@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <!-- Clean hexagonal mark in ink and copper -->
-  <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="#ecebea" stroke="#202227" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M32 16L46 25V39L32 48L18 39V25L32 16Z" fill="#f6f5f3" stroke="#705886" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M34 22L26 33H33L30 42L40 30H32L35 22H34Z" fill="#a15538"/>
-  <circle cx="32" cy="11" r="2" fill="#202227"/>
+  <!-- Kalista's emblem: calm geometry, warm brick and slate -->
+  <rect width="64" height="64" rx="14" fill="#F5F3EE"/>
+  <circle cx="32" cy="32" r="22" stroke="#293740" stroke-width="2.5" fill="#E8EFF2"/>
+  <path d="M32 18L44 26V38L32 46L20 38V26L32 18Z" stroke="#984D3C" stroke-width="2.2" stroke-linejoin="round" fill="none"/>
+  <!-- Warm hearth center / amber light -->
+  <circle cx="32" cy="32" r="4.5" fill="#D6B276"/>
 </svg>

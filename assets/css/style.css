@@ -1,61 +1,72 @@
 /* ==========================================================================
-   Kalista — Tears Mysthrala
-   Personal Identity: Empresaria & Desarrolladora de Sistemas
+   Unai Kalista Urzainqui Pérez — Presencia Digital & Identidad
+   Desarrolladora y fundadora de MKDL
    
-   Aesthetic Direction:
-   - High-Craft Japanese Editorial (Serene, non-brutalist, tactile, continuous)
-   - Concept of "Ma" (間): Intentional negative space and calm rhythm
-   - Benten: Silk Paper (#faf8f5 / #ffffff), Soft Wisteria (#58436b)
-   - Kurogane: Forged Iron Ink (#1d1e23), Charcoal Muted (#5c5f6b), Delicate Lines (rgba(29, 30, 35, 0.07))
-   - Akkorokamui: Lacquered Vermilion Accent (#b5382b), Terracotta (#a1533b)
-   - Raijin: Warm Thunder Amber (#b57b28)
+   Dirección artística:
+   - "Calidez humana en un entorno frío"
+   - Puerto del norte en invierno (Hakodate): nieve, agua azul grisácea,
+     aire limpio, ladrillo rojo (#984D3C) y luz cálida (#D6B276).
+   - Referencias sutiles: Kurogane (acero/oficio), Mystra (conexiones/violeta tenue),
+     Akkorokamui (corriente/cobre), Benten (escucha/celadón), Raijin (impulso/ámbar).
    ========================================================================== */
 
 :root {
   color-scheme: light;
 
-  /* Surfaces: Organic continuous canvas */
-  --paper: #faf8f5;
-  --surface: #ffffff;
-  --surface-subtle: #f3f0ea;
+  /* Superficies: Predominio de tonos claros y táctiles */
+  --bg-canvas: #F5F3EE;       /* Blanco cálido, suave, no clínico */
+  --surface-cold: #E8EFF2;    /* Nieve azulada */
+  --mist: #D5E0E5;            /* Bruma y profundidad ambiental */
+  --surface-card: #FFFFFF;    /* Papel blanco puro */
+  --surface-subtle: #F0EDE6;  /* Sombra de papel */
 
-  /* Kurogane (Ink & Subtle Rules) */
-  --ink: #1d1e23;
-  --muted: #5c5f6b;
-  --faint: #8a8d99;
-  --line: rgba(29, 30, 35, 0.08);
-  --line-strong: rgba(29, 30, 35, 0.14);
+  /* Kurogane (Pizarra, metal mate e hilos precisos) */
+  --ink: #293740;             /* Pizarra oscura, alto contraste, legible */
+  --ink-secondary: #52616A;   /* Gris azulado para párrafos secundarios */
+  --ink-muted: #73838E;       /* Texto tenue y metadatos */
+  --steel: #4A5B66;           /* Acero mate / estructura */
+  --border-delicate: rgba(41, 55, 64, 0.08);
+  --border-medium: rgba(41, 55, 64, 0.14);
 
-  /* Benten (Wisteria Tone) */
-  --wisteria: #58436b;
-  --wisteria-deep: #352643;
-  --wisteria-soft: #f2eef6;
+  /* Akkorokamui & Calidez (Ladrillo rojo y cobre) */
+  --brick: #984D3C;           /* Acento cálido principal */
+  --brick-hover: #7E3B2C;     /* Ladrillo envejecido en hover */
+  --brick-soft: rgba(152, 77, 60, 0.08);
 
-  /* Akkorokamui (Sacred Vermilion / Cinnabar) */
-  --vermilion: #b5382b;
-  --vermilion-hover: #96251b;
-  --copper: #a1533b;
+  /* Raijin (Luz de ventana y energía contenida) */
+  --amber: #D6B276;           /* Reflejo ámbar */
+  --amber-soft: rgba(214, 178, 118, 0.2);
 
-  /* Raijin (Thunder Amber) */
-  --amber: #b57b28;
+  /* Mystra & Benten (Matices secundarios para detalles) */
+  --violet-subtle: #B7AED3;   /* Filamentos de ideas conectadas */
+  --celadon-subtle: #A9C6BD;  /* Escucha, fluidez y resonancia */
 
-  /* Shadows (Soft, organic, zero brutalism) */
-  --shadow-sm: 0 2px 8px rgba(35, 30, 45, 0.03);
-  --shadow-md: 0 8px 24px rgba(35, 30, 45, 0.04);
-  --shadow-lg: 0 16px 40px rgba(35, 30, 45, 0.05);
+  /* Tipografías */
+  --font-serif: "Newsreader", "Iowan Old Style", "Apple Garamond", "Baskerville", "Georgia", serif;
+  --font-sans: "Aptos", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
 
-  /* Layout */
-  --max: 72rem;
+  /* Dimensiones y espaciados */
+  --max-width: 74rem;
   --gutter: clamp(1.5rem, 5vw, 4rem);
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --radius-pill: 9999px;
-  --transition: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Sombras y transiciones serenas */
+  --shadow-soft: 0 4px 20px rgba(41, 55, 64, 0.04);
+  --shadow-card: 0 10px 30px rgba(41, 55, 64, 0.05);
+  --transition: 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ==========================================================================
+   Reset & Base
+   ========================================================================== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -64,48 +75,44 @@ html {
 }
 
 body {
-  margin: 0;
-  background-color: var(--paper);
+  background-color: var(--bg-canvas);
   color: var(--ink);
-  font-family: "Aptos", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  line-height: 1.68;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.72;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--transition);
+  transition: color var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
 a:hover {
-  color: var(--vermilion);
+  color: var(--brick);
 }
 
-h1, h2, h3, h4, p {
-  margin-top: 0;
-}
-
-h1, h2, h3 {
-  font-weight: 520;
-  letter-spacing: -0.03em;
-  line-height: 1.12;
-  color: var(--ink);
-}
-
-/* Accessibility */
+/* Accesibilidad y foco */
 .skip-link {
   position: fixed;
   left: 1.5rem;
   top: -5rem;
-  z-index: 999;
-  padding: 0.65rem 1.2rem;
+  z-index: 1000;
+  padding: 0.75rem 1.4rem;
   background: var(--ink);
-  color: #fff;
+  color: #FFFFFF;
   border-radius: var(--radius-pill);
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 550;
   transition: top var(--transition);
 }
 
@@ -114,47 +121,58 @@ h1, h2, h3 {
 }
 
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--vermilion);
+  outline: 2px solid var(--brick);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ==========================================================================
-   Header
+   Cabecera
    ========================================================================== */
 .site-header {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  min-height: 6rem;
+  width: min(calc(100% - 2 * var(--gutter)), var(--max-width));
+  min-height: 5.5rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border-delicate);
 }
 
 .brand-link {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .brand-name {
-  font-size: 1.35rem;
-  font-weight: 640;
-  letter-spacing: -0.025em;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 
-.brand-sep {
-  color: var(--vermilion);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.brand-sub {
-  font-size: 0.9rem;
-  color: var(--muted);
+.brand-mark {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brick);
+  margin-top: 0.2rem;
 }
 
 nav {
@@ -164,66 +182,90 @@ nav {
   font-size: 0.92rem;
 }
 
-nav a:not(.nav-contact):hover {
-  color: var(--wisteria);
+nav a {
+  color: var(--ink-secondary);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--ink);
 }
 
 .nav-contact {
-  color: var(--vermilion);
-  font-weight: 550;
-  padding: 0.4rem 1rem;
+  color: var(--brick) !important;
+  font-weight: 600;
+  padding: 0.4rem 1.1rem;
   border-radius: var(--radius-pill);
-  background: rgba(181, 56, 43, 0.08);
+  background: var(--brick-soft);
+  border: 1px solid rgba(152, 77, 60, 0.18);
   transition: all var(--transition);
 }
 
 .nav-contact:hover {
-  background: var(--vermilion);
-  color: #ffffff;
+  background: var(--brick);
+  color: #FFFFFF !important;
+  border-color: var(--brick);
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero / Presentación Principal
    ========================================================================== */
 .hero {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
+  width: min(calc(100% - 2 * var(--gutter)), var(--max-width));
   margin: 0 auto;
-  padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(4rem, 7vw, 6rem);
+  padding: clamp(3.5rem, 7vw, 6.5rem) 0 clamp(4rem, 8vw, 7rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(19rem, 0.75fr);
-  gap: clamp(3rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.95fr);
+  gap: clamp(3rem, 5vw, 5.5rem);
   align-items: center;
 }
 
-.context,
-.section-index {
-  color: var(--wisteria);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 1.1rem;
+.identity-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.92rem;
+  margin-bottom: 1.35rem;
+}
+
+.identity-name {
+  font-weight: 650;
+  color: var(--brick);
+  letter-spacing: -0.01em;
+}
+
+.identity-sep {
+  color: var(--ink-muted);
+}
+
+.identity-role {
+  color: var(--ink-secondary);
+  font-weight: 500;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 4.4vw, 4.2rem);
-  max-width: 15ch;
+  font-family: var(--font-serif);
+  font-size: clamp(2.7rem, 4.8vw, 4.4rem);
+  font-weight: 480;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--ink);
   margin-bottom: 1.75rem;
-  line-height: 1.1;
 }
 
 .hero h1 em {
   font-style: normal;
-  color: var(--vermilion);
+  color: var(--brick);
   display: block;
 }
 
 .hero-lead {
-  font-size: clamp(1.06rem, 1.4vw, 1.24rem);
-  color: var(--muted);
-  max-width: 40rem;
-  line-height: 1.7;
-  margin-bottom: 2.2rem;
+  font-size: clamp(1.1rem, 1.6vw, 1.28rem);
+  color: var(--ink-secondary);
+  line-height: 1.72;
+  max-width: 42rem;
+  margin-bottom: 2.4rem;
 }
 
 .hero-actions {
@@ -233,421 +275,574 @@ nav a:not(.nav-contact):hover {
   gap: 1.75rem;
 }
 
+/* Botones principales con respuesta luminosa sutil (Raijin) */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.85rem;
-  padding: 0.65rem 1.45rem;
-  font-size: 0.94rem;
-  font-weight: 550;
+  min-height: 3rem;
+  padding: 0.75rem 1.65rem;
+  font-size: 0.96rem;
+  font-weight: 600;
   border-radius: var(--radius-pill);
   transition: all var(--transition);
+  cursor: pointer;
 }
 
 .button-primary {
-  background: var(--ink);
-  color: #ffffff;
-  box-shadow: var(--shadow-sm);
+  background: var(--brick);
+  color: #FFFFFF;
+  box-shadow: 0 3px 12px rgba(152, 77, 60, 0.22);
 }
 
 .button-primary:hover {
-  background: var(--vermilion);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(181, 56, 43, 0.25);
+  background: var(--brick-hover);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(214, 178, 118, 0.5); /* Destello cálido ámbar */
+  transform: translateY(-1px);
 }
 
-.text-link {
-  font-size: 0.95rem;
-  font-weight: 550;
+.text-action {
+  font-size: 0.98rem;
+  font-weight: 600;
   color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 0.35em;
-  text-decoration-color: var(--line-strong);
+  text-decoration-color: var(--border-medium);
 }
 
-.text-link:hover {
-  text-decoration-color: var(--vermilion);
-  color: var(--vermilion);
+.text-action:hover {
+  color: var(--brick);
+  text-decoration-color: var(--brick);
 }
 
-/* ==========================================================================
-   Hero Profile Card (Serene, soft, non-brutalist)
-   ========================================================================== */
-.profile-card {
+/* Ilustración del puerto en invierno */
+.hero-visual {
+  position: relative;
+}
+
+.port-artwork {
   margin: 0;
-  background: var(--surface);
-  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 2rem 2.2rem;
-  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-delicate);
+  background: var(--surface-cold);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.card-head {
-  display: flex;
-  justify-content: space-between;
-  color: var(--faint);
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding-bottom: 1.1rem;
-  border-bottom: 1px solid var(--line);
+.port-artwork:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(41, 55, 64, 0.08);
 }
 
-.card-quote {
-  font-size: clamp(1.12rem, 1.5vw, 1.3rem);
-  font-weight: 500;
-  line-height: 1.45;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-  margin: 1.4rem 0 1.6rem;
-}
-
-.card-specs {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--line);
-}
-
-.spec-row {
-  display: grid;
-  grid-template-columns: 8rem 1fr;
-  gap: 1rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.88rem;
-}
-
-.spec-label {
-  color: var(--ink);
-  font-weight: 580;
-}
-
-.spec-value {
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.card-foot {
-  margin: 1.25rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-  font-size: 0.82rem;
-  color: var(--wisteria);
-  font-weight: 520;
+.port-artwork img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 /* ==========================================================================
-   Editorial Quote Statement (Quiet, spacious, non-block)
+   Secciones Generales
    ========================================================================== */
-.quote-statement {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
+.section {
+  width: min(calc(100% - 2 * var(--gutter)), var(--max-width));
   margin: 0 auto;
-  padding: clamp(3rem, 6vw, 5rem) 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  border-top: 1px solid var(--border-delicate);
 }
 
-.quote-statement blockquote {
-  margin: 0;
-  padding: 0;
-}
-
-.quote-main {
-  font-size: clamp(1.65rem, 3vw, 2.6rem);
-  letter-spacing: -0.03em;
-  line-height: 1.22;
-  font-weight: 520;
-  color: var(--ink);
-  max-width: 32ch;
+.section-tag {
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--steel);
   margin-bottom: 0.8rem;
 }
 
-.quote-sub {
-  font-size: clamp(1.08rem, 1.6vw, 1.35rem);
-  color: var(--wisteria);
-  max-width: 38ch;
-  margin-bottom: 0;
-  line-height: 1.5;
-}
-
-/* ==========================================================================
-   Main Content Sections
-   ========================================================================== */
-.section {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  margin: 0 auto;
-  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.section-heading {
-  margin-bottom: 3.5rem;
+.section-head {
   max-width: 44rem;
+  margin-bottom: 4rem;
 }
 
-.section-heading h2 {
-  font-size: clamp(2rem, 3.6vw, 3.2rem);
+.section-head h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 480;
   line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.section-lead {
+  font-size: 1.12rem;
+  color: var(--ink-secondary);
+  line-height: 1.7;
 }
 
 /* ==========================================================================
-   Dual Columns: Empresaria & Desarrolladora (Soft cards)
+   Mi Enfoque (Layout Editorial)
    ========================================================================== */
-.dual-columns {
+.editorial-layout {
+  display: grid;
+  grid-template-columns: minmax(10rem, 16rem) 1fr;
+  gap: clamp(2.5rem, 5vw, 6rem);
+}
+
+.editorial-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kurogane-rule {
+  width: 2.5rem;
+  height: 2px;
+  background: var(--steel);
+  border-radius: 1px;
+}
+
+.editorial-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 480;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.prose p {
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.78;
+  margin-bottom: 1.4rem;
+}
+
+.core-statement {
+  margin: 3rem 0;
+  padding: 1.75rem 0 1.75rem 2rem;
+  border-left: 3px solid var(--brick);
+  background: linear-gradient(90deg, rgba(152, 77, 60, 0.04) 0%, transparent 100%);
+}
+
+.core-statement p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.prose-secondary p {
+  color: var(--ink-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   Lo Que Construyo (MKDL & Kurogane Hub)
+   ========================================================================== */
+.projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 3rem;
 }
 
-.column-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+.project-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-delicate);
   border-radius: var(--radius-lg);
-  padding: clamp(2rem, 4vw, 2.8rem);
-  box-shadow: var(--shadow-sm);
+  padding: clamp(2.2rem, 4vw, 3rem);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.column-card h3 {
-  font-size: clamp(1.45rem, 2vw, 1.85rem);
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border-delicate);
+}
+
+.project-kind {
+  color: var(--brick);
+}
+
+.project-tech .project-kind {
+  color: var(--steel);
+}
+
+.project-status {
+  color: var(--ink-muted);
+}
+
+.project-card h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   margin-bottom: 1rem;
-  font-weight: 540;
 }
 
-.column-intro {
-  font-size: 1.02rem;
-  color: var(--muted);
+.project-premise {
+  font-size: 1.06rem;
+  color: var(--ink);
   line-height: 1.68;
+  margin-bottom: 2rem;
+  font-weight: 480;
+}
+
+.project-problem,
+.project-approach {
   margin-bottom: 1.8rem;
 }
 
-.clean-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
+.project-problem h4,
+.project-approach h4 {
+  font-size: 0.85rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.6rem;
 }
 
-.clean-list li {
-  font-size: 0.95rem;
-  color: var(--muted);
+.project-problem p {
+  font-size: 0.98rem;
+  color: var(--ink-secondary);
   line-height: 1.65;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.feature-list li {
+  font-size: 0.96rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
   position: relative;
   padding-left: 1.4rem;
 }
 
-.clean-list li::before {
+.feature-list li::before {
   content: "—";
   position: absolute;
   left: 0;
-  color: var(--copper);
+  color: var(--brick);
   font-weight: 600;
 }
 
-.clean-list strong {
+.project-tech .feature-list li::before {
+  color: var(--steel);
+}
+
+.feature-list strong {
   color: var(--ink);
-  font-weight: 580;
+  font-weight: 600;
 }
 
-/* ==========================================================================
-   Practice Lists (Industrial & Systems)
-   ========================================================================== */
-.practice-list {
-  border-top: 1px solid var(--line);
+.continuity-note {
+  padding: 1.75rem 2rem;
+  background: var(--surface-cold);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-delicate);
 }
 
-.practice-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  padding: 2.2rem 0;
-  border-bottom: 1px solid var(--line);
-  align-items: baseline;
-}
-
-.practice-main h3 {
-  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
-  margin-bottom: 0.5rem;
-  font-weight: 540;
-}
-
-.practice-main p {
+.continuity-note p {
+  color: var(--ink-secondary);
   font-size: 1rem;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 0;
-  max-width: 44rem;
+  line-height: 1.68;
 }
 
-.practice-main em {
-  font-style: italic;
+.continuity-note em {
+  font-style: normal;
   color: var(--ink);
-}
-
-.practice-tag {
-  font-size: 0.84rem;
-  color: var(--wisteria);
-  background: var(--wisteria-soft);
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-pill);
-  font-weight: 520;
-  white-space: nowrap;
+  font-weight: 600;
 }
 
 /* ==========================================================================
-   Principles Grid (Soft cards)
+   Desarrolladora y Empresaria (Dual Grid)
    ========================================================================== */
-.principles-grid {
+.dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
 }
 
-.principle-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: clamp(1.8rem, 3vw, 2.4rem);
-  box-shadow: var(--shadow-sm);
+.dual-column {
+  background: var(--surface-card);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.2rem, 4vw, 3rem);
+  box-shadow: var(--shadow-soft);
 }
 
-.principle-card h3 {
-  font-size: clamp(1.25rem, 1.6vw, 1.45rem);
-  margin-bottom: 0.75rem;
-  font-weight: 540;
+.column-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.principle-card p {
-  font-size: 0.98rem;
-  color: var(--muted);
-  line-height: 1.65;
+.column-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.dev-mark {
+  background: var(--steel);
+}
+
+.biz-mark {
+  background: var(--brick);
+}
+
+.column-badge h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.column-desc {
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.68;
+  margin-bottom: 2.2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-delicate);
+}
+
+.facet-block {
+  margin-bottom: 1.8rem;
+}
+
+.facet-block:last-child {
   margin-bottom: 0;
 }
 
-/* ==========================================================================
-   Contact Section (Warm, serene, harmonious)
-   ========================================================================== */
-.contact-section {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
-  margin: 0 auto;
-  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+.facet-block h4 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
-.contact-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+.facet-block p {
+  font-size: 0.96rem;
+  color: var(--ink-secondary);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Sobre Mí (Música, Artes Marciales, Euskadi & Japón)
+   ========================================================================== */
+.benten-line {
+  width: 2.5rem;
+  height: 2px;
+  background: var(--celadon-subtle);
+  border-radius: 1px;
+}
+
+.personal-facets {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.facet-item {
+  background: var(--surface-card);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.facet-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.facet-pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+.facet-header h4 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.facet-item p {
+  font-size: 1rem;
+  color: var(--ink-secondary);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Contacto
+   ========================================================================== */
+.section-contact {
+  padding-bottom: clamp(6rem, 9vw, 9rem);
+}
+
+.contact-box {
+  background: var(--surface-card);
+  border: 1px solid var(--border-delicate);
   border-radius: var(--radius-lg);
   padding: clamp(2.5rem, 6vw, 4.5rem);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   max-width: 52rem;
+  margin: 0 auto;
 }
 
-.contact-card h2 {
-  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-  margin: 0.4rem 0 1.25rem;
-  line-height: 1.15;
+.contact-box h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 480;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin: 0.5rem 0 1.25rem;
 }
 
 .contact-lead {
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
-  line-height: 1.68;
-  margin-bottom: 2.2rem;
-  max-width: 40rem;
+  font-size: clamp(1.08rem, 1.5vw, 1.25rem);
+  color: var(--ink-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.4rem;
 }
 
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.75rem;
-  margin-bottom: 1.75rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-delicate);
 }
 
 .button-contact {
-  background: var(--vermilion);
-  color: #ffffff;
-  font-size: 0.96rem;
-  box-shadow: 0 4px 14px rgba(181, 56, 43, 0.22);
+  background: var(--brick);
+  color: #FFFFFF;
 }
 
 .button-contact:hover {
-  background: var(--vermilion-hover);
-  color: #ffffff;
+  background: var(--brick-hover);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(214, 178, 118, 0.5);
+  transform: translateY(-1px);
 }
 
-.contact-link {
-  color: var(--ink);
+.social-link {
   font-size: 0.96rem;
-  font-weight: 550;
+  font-weight: 600;
+  color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 0.35em;
-  text-decoration-color: var(--line-strong);
+  text-decoration-color: var(--border-medium);
 }
 
-.contact-link:hover {
-  text-decoration-color: var(--vermilion);
-  color: var(--vermilion);
+.social-link:hover {
+  color: var(--brick);
+  text-decoration-color: var(--brick);
 }
 
-.contact-languages {
-  font-size: 0.88rem;
-  color: var(--faint);
-  margin: 0;
+.contact-footnote p {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
-  border-top: 1px solid var(--line);
-  padding: 3rem 0;
+  border-top: 1px solid var(--border-delicate);
+  padding: 3.5rem 0;
+  background: var(--bg-canvas);
 }
 
 .footer-wrap {
-  width: min(calc(100% - 2 * var(--gutter)), var(--max));
+  width: min(calc(100% - 2 * var(--gutter)), var(--max-width));
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.footer-brand {
-  display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 1.75rem;
 }
 
-.footer-title {
-  font-size: 1.1rem;
-  font-weight: 640;
-  letter-spacing: -0.02em;
+.footer-signature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+}
+
+.footer-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
   color: var(--ink);
 }
 
-.footer-sub {
-  font-size: 0.86rem;
-  color: var(--muted);
+.footer-desc {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
 }
 
 .footer-nav {
   display: flex;
-  gap: 1.6rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--muted);
   flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-nav a {
+  color: var(--ink-secondary);
 }
 
 .footer-nav a:hover {
-  color: var(--ink);
+  color: var(--brick);
+}
+
+.footer-colophon {
+  font-size: 0.84rem;
+  color: var(--ink-muted);
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-delicate);
 }
 
 /* ==========================================================================
@@ -656,22 +851,24 @@ nav a:not(.nav-contact):hover {
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
+    gap: 3rem;
     padding: 3.5rem 0 3rem;
   }
 
-  .dual-columns {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .hero-visual {
+    order: 2;
+    max-width: 32rem;
   }
 
-  .practice-item {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .principles-grid {
+  .editorial-layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .projects-grid,
+  .dual-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
@@ -679,13 +876,24 @@ nav a:not(.nav-contact):hover {
   .site-header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.75rem 0 1.25rem;
+    padding: 1.5rem 0 1rem;
     min-height: auto;
+    gap: 1.25rem;
   }
 
   nav {
     flex-wrap: wrap;
-    gap: 0.9rem 1.4rem;
+    gap: 0.85rem 1.4rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .button {
+    width: 100%;
   }
 
   .contact-actions {
@@ -693,10 +901,16 @@ nav a:not(.nav-contact):hover {
     align-items: flex-start;
     gap: 1.25rem;
   }
+}
 
-  .footer-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
+/* ==========================================================================
+   Prefers Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
