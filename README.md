@@ -22,7 +22,7 @@ Los detalles biográficos proceden de la usuaria. El relato personal se distingu
 
 ## Publicación
 
-Preparado para Cloudflare Pages con integración Git: rama de producción `main`, comando de compilación `node scripts/build.mjs` y directorio de salida `dist`. El script publica únicamente archivos de la web y genera el sitemap; no publica las notas de trabajo ni los metadatos del repositorio. La conexión de la cuenta y el primer despliegue están pendientes de validación. `CNAME.example` es un ejemplo. El dominio canónico es `https://mysthrala.com/`.
+Preparado para Cloudflare Pages con integración Git: rama de producción `main`, comando de compilación `node scripts/build.mjs` y directorio de salida `dist`. El script publica únicamente archivos de la web y genera el sitemap; no publica las notas de trabajo ni los metadatos del repositorio. Proyecto `mysthrala.pages.dev` conectado a este repositorio mediante la integración Git de Cloudflare. Cada push a `main` despliega producción; las demás ramas generan vistas previas. La aplicación de GitHub tiene acceso limitado a este repositorio. `CNAME.example` es un ejemplo. El dominio canónico es `https://mysthrala.com/`.
 
 `_headers` solo se aplica en servicios compatibles; GitHub Pages no lo interpreta. Las cabeceras deben comprobarse en el servidor real. Los SVG anteriores se conservan aunque ya no aparezcan en la página.
 
