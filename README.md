@@ -33,3 +33,5 @@ Código bajo [MIT](LICENSE). La identidad y las marcas no conceden derechos de r
 ## Tema y legibilidad
 
 El botón de la cabecera alterna entre tema claro y oscuro. La primera visita respeta el sistema; una elección manual se guarda en localStorage cuando está disponible. Si el almacenamiento está bloqueado, el selector sigue funcionando durante la visita. Sin JavaScript se aplica la preferencia del sistema mediante CSS y las historias permanecen visibles.
+
+El build asigna nombres con hash de contenido al CSS y JavaScript y actualiza sus referencias en el HTML publicado. Así una visita anterior recibe los estilos nuevos aunque conserve recursos en caché.
