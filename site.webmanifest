@@ -1,16 +1,1 @@
-{
-  "name": "Kalista — Tears Mysthrala | MKDL",
-  "short_name": "Mysthrala",
-  "description": "Founder en Mysthrala Kurogane Defense Labs · Consultoría OT / ICS · Systems & Software Dev",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#090d16",
-  "theme_color": "#0f172a",
-  "icons": [
-    {
-      "src": "assets/images/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+{"name":"Kalista / Mysthrala","short_name":"Mysthrala","description":"Un rincón propio: agua, danza vasca, mitología y proyectos.","start_url":"/","display":"browser","background_color":"#191923","theme_color":"#191923","icons":[{"src":"assets/images/favicon.svg","sizes":"any","type":"image/svg+xml"}]}
