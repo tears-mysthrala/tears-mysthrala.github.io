@@ -2,7 +2,7 @@
 
 Generada con la herramienta integrada `image_gen`, el 2026-10-03. Interpretación artística contemporánea, sin pretensión de autenticidad histórica ni de representar geográficamente Hakodate.
 
-Original conservado en `C:\Users\unaiu\.codex\generated_images\01a102ad-b556-7ba1-982f-1415e7116d0f\exec-7baa9818-5aa9-4c0e-bdb6-2db78e6f0ce7.png`.
+Original conservado en `original conservado fuera del repositorio`.
 
 Versiones del proyecto: `assets/images/mythic-night.webp` (1536 × 1024; 474558 bytes) y `assets/images/mythic-night-social.jpg`. Conversión de formato con Pillow; sin cambios creativos posteriores.
 

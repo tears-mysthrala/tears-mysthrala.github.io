@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 
 // Publish only site files: repository metadata and workflow notes stay outside dist.
-await rm(new URL('../dist/', import.meta.url), { recursive: true, force: true });
+await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
 for (const file of ['index.html', 'site.webmanifest', 'robots.txt', '_headers']) {
   await cp(file, `dist/${file}`);

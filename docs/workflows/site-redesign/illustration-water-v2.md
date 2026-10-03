@@ -4,7 +4,7 @@ Edición realizada con la herramienta integrada `image_gen` el 2026-10-03. Se co
 
 Archivos usados por la web: `assets/images/mythic-night-water-v2.webp` y `assets/images/mythic-night-water-v2-social.jpg`.
 
-Original de la edición: `C:\Users\unaiu\.codex\generated_images\01a102ad-b556-7ba1-982f-1415e7116d0f\exec-29bb3eb2-26aa-4410-b680-94c7c1c2a4a0.png`. Se conservan las versiones anteriores.
+Original de la edición: `original conservado fuera del repositorio`. Se conservan las versiones anteriores.
 
 ## Prompt final
 
