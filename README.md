@@ -14,7 +14,7 @@ Abrir http://127.0.0.1:8080. HTML en `index.html`, estilos en `assets/css/style.
 
 ## Diseño y contenido
 
-Paisaje nocturno, tipografía serif, tonos tinta, lavanda y coral. La ilustración original se generó con IA y se guarda en `assets/images/mythic-night-water-v2.webp`; la versión JPEG sirve para metadatos sociales. Es una interpretación artística, no una representación documental de Hakodate ni una obra histórica japonesa. [Prompt y procedencia](docs/workflows/site-redesign/illustration-water-v2.md).
+Paisaje nocturno, tipografía serif, tonos tinta, lavanda y coral. Los cinco emblemas aportados por la usuaria tienen variantes transparentes con contorno plateado incorporado. Los SVG vectoriales se guardan en `assets/images/emblems/`; la web sirve versiones WebP responsive para reducir transferencia y trabajo de renderizado. El monograma personal aparece en cabecera, portada y favicon; Benten, Akkorokamui, Raijū y Hakodate acompañan sus respectivas secciones. La ilustración nocturna anterior se conserva y su JPEG sigue usándose en metadatos sociales. Es una interpretación artística, no una representación documental de Hakodate ni una obra histórica japonesa. [Prompt y procedencia](docs/workflows/site-redesign/illustration-water-v2.md).
 
 Benten, Akkorokamui y Raijū se exploran con botones nativos, ratón o teclado. Las tres historias están presentes en el HTML y se pueden leer sin JavaScript. Sin fuentes, rastreo ni scripts externos. Estilos responsive, foco visible y respeto a movimiento reducido.
 
@@ -29,3 +29,7 @@ Preparado para Cloudflare Pages con integración Git: rama de producción `main`
 ## Licencia
 
 Código bajo [MIT](LICENSE). La identidad y las marcas no conceden derechos de representación.
+
+## Tema y legibilidad
+
+El botón de la cabecera alterna entre tema claro y oscuro. La primera visita respeta el sistema; una elección manual se guarda en localStorage cuando está disponible. Si el almacenamiento está bloqueado, el selector sigue funcionando durante la visita. Sin JavaScript se aplica la preferencia del sistema mediante CSS y las historias permanecen visibles.
