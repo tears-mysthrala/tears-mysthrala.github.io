@@ -11,8 +11,8 @@
     const button = document.querySelector('.theme-toggle');
     if (button) {
       const next = theme === 'light' ? 'oscuro' : 'claro';
-      button.textContent = `Tema ${next}`;
       button.setAttribute('aria-label', `Cambiar a tema ${next}`);
+      button.title = `Cambiar a tema ${next}`;
       button.hidden = false;
     }
   }
