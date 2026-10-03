@@ -176,6 +176,11 @@ summary:focus { outline:2px solid var(--accent); outline-offset:7px; }
 .theme-toggle { order:3; border:1px solid var(--line); border-radius:5px; padding:10px 14px; min-height:44px; background:var(--surface); color:var(--paper); cursor:pointer; white-space:nowrap; font-size:13px; }
 .theme-toggle:hover { border-color:var(--accent); }
 .theme-toggle[hidden] { display:none; }
+.theme-toggle { width:48px; padding:7px; display:grid; place-items:center; }
+.theme-icon { width:30px; height:30px; }
+.theme-icon-moon { display:none; }
+:root[data-theme="light"] .theme-icon-sun { display:none; }
+:root[data-theme="light"] .theme-icon-moon { display:block; }
 .hero { min-height:600px; }
 .hero::after { display:none; }
 .hero-emblem { inset:auto max(24px,calc((100vw - 1200px)/2)) auto auto; top:50%; transform:translateY(-50%); aspect-ratio:1; width:49%; max-width:570px; z-index:-1; }
